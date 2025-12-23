@@ -6,6 +6,11 @@ import HeaderLink from './HeaderLink.astro';
 <header>
 	<nav>
 		<h2><a href="/">{SITE_TITLE}</a></h2>
+		<button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+			<span></span>
+			<span></span>
+			<span></span>
+		</button>
 		<div class="internal-links">
 			<HeaderLink href="/">Home</HeaderLink>
 			<HeaderLink href="/blog">Blog</HeaderLink>
@@ -42,6 +47,32 @@ import HeaderLink from './HeaderLink.astro';
 		</div>
 	</nav>
 </header>
+
+<script>
+	document.addEventListener('DOMContentLoaded', () => {
+		const hamburger = document.querySelector('.hamburger');
+		const nav = document.querySelector('nav');
+		const internalLinks = document.querySelector('.internal-links');
+
+		if (hamburger && nav && internalLinks) {
+			hamburger.addEventListener('click', () => {
+				nav.classList.toggle('menu-open');
+				const isOpen = nav.classList.contains('menu-open');
+				hamburger.setAttribute('aria-expanded', isOpen.toString());
+			});
+
+			// Close menu when clicking a link
+			const links = internalLinks.querySelectorAll('a');
+			links.forEach(link => {
+				link.addEventListener('click', () => {
+					nav.classList.remove('menu-open');
+					hamburger.setAttribute('aria-expanded', 'false');
+				});
+			});
+		}
+	});
+</script>
+
 <style>
 	header {
 		margin: 0;
@@ -110,7 +141,91 @@ import HeaderLink from './HeaderLink.astro';
 		filter: drop-shadow(0 0 5px var(--accent));
 		transform: translateY(-2px);
 	}
+
+	/* Hamburger button - ukryty domyślnie */
+	.hamburger {
+		display: none;
+		flex-direction: column;
+		gap: 5px;
+		background: transparent;
+		border: none;
+		cursor: pointer;
+		padding: 0.5em;
+		z-index: 101;
+	}
+
+	.hamburger span {
+		display: block;
+		width: 25px;
+		height: 3px;
+		background: var(--accent);
+		transition: all 0.3s ease;
+		box-shadow: 0 0 5px rgba(0, 255, 65, 0.5);
+	}
+
+	/* Animacja hamburger -> X */
+	nav.menu-open .hamburger span:nth-child(1) {
+		transform: translateY(8px) rotate(45deg);
+	}
+
+	nav.menu-open .hamburger span:nth-child(2) {
+		opacity: 0;
+	}
+
+	nav.menu-open .hamburger span:nth-child(3) {
+		transform: translateY(-8px) rotate(-45deg);
+	}
+
 	@media (max-width: 720px) {
+		.hamburger {
+			display: flex;
+		}
+
+		.internal-links {
+			position: absolute;
+			top: 100%;
+			left: 0;
+			right: 0;
+			background: rgba(var(--black), 0.98);
+			backdrop-filter: blur(10px);
+			flex-direction: column;
+			padding: 0;
+			max-height: 0;
+			overflow: hidden;
+			transition: max-height 0.3s ease, padding 0.3s ease;
+			border-bottom: 1px solid transparent;
+			box-shadow: none;
+		}
+
+		nav.menu-open .internal-links {
+			max-height: 300px;
+			padding: 1em 0;
+			border-bottom-color: rgba(0, 255, 65, 0.3);
+			box-shadow: 0 5px 20px rgba(0, 255, 65, 0.2);
+		}
+
+		.internal-links a {
+			display: block;
+			padding: 0.75em 1.5em;
+			border-bottom: none;
+			border-left: 3px solid transparent;
+		}
+
+		.internal-links a:hover,
+		.internal-links a.active {
+			border-left-color: var(--accent);
+			border-bottom-color: transparent;
+			background: rgba(0, 255, 65, 0.05);
+		}
+
+		nav {
+			position: relative;
+		}
+
+		h2 {
+			font-size: 0.9em;
+		}
+
 		.social-links {
 			display: none;
 		}
