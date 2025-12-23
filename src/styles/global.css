@@ -10,14 +10,10 @@
 	--accent-dark: #00b82e;
 
 	/* Ciemne tła (RGB triplets dla rgba) */
-	--black: 10, 10, 15;           /* Prawie czarny z fioletowym odcieniem */
+	--black: 10, 10, 15;           /* Prawie czarny */
 	--gray: 100, 255, 150;         /* Neonowa zieleń dla akcentów */
-	--gray-light: 30, 30, 40;      /* Ciemny fioletowo-szary dla tła */
+	--gray-light: 30, 30, 40;      /* Ciemny szary dla tła */
 	--gray-dark: 200, 255, 200;    /* Jasna neonowa zieleń dla tekstu */
-
-	/* Fioletowy akcent */
-	--purple: #b900ff;
-	--purple-dark: #8800cc;
 
 	/* Cyberpunk gradient */
 	--gray-gradient: rgba(20, 15, 30, 90%), rgba(10, 10, 15, 100%);
@@ -28,21 +24,11 @@
 		0 0 10px rgba(0, 255, 65, 0.2),
 		0 0 20px rgba(0, 255, 65, 0.1);
 
-	--box-shadow-purple:
-		0 0 5px rgba(185, 0, 255, 0.3),
-		0 0 10px rgba(185, 0, 255, 0.2),
-		0 0 20px rgba(185, 0, 255, 0.1);
-
 	--text-glow-green:
 		0 0 5px rgba(0, 255, 65, 0.8),
 		0 0 10px rgba(0, 255, 65, 0.6),
 		0 0 15px rgba(0, 255, 65, 0.4),
 		0 0 20px rgba(0, 255, 65, 0.2);
-
-	--text-glow-purple:
-		0 0 5px rgba(185, 0, 255, 0.8),
-		0 0 10px rgba(185, 0, 255, 0.6),
-		0 0 15px rgba(185, 0, 255, 0.4);
 }
 @font-face {
 	font-family: "Atkinson";
@@ -105,8 +91,8 @@ h3 {
 }
 h4 {
 	font-size: 1.563em;
-	color: var(--purple);
-	text-shadow: var(--text-glow-purple);
+	color: var(--accent);
+	text-shadow: var(--text-glow-green);
 }
 h5 {
 	font-size: 1.25em;
@@ -123,8 +109,8 @@ a {
 	position: relative;
 }
 a:hover {
-	color: var(--purple);
-	text-shadow: var(--text-glow-purple);
+	color: var(--accent);
+	text-shadow: var(--text-glow-green);
 	animation: rgb-split 0.3s ease;
 }
 p {
@@ -152,8 +138,8 @@ img {
 	transition: all 0.3s ease;
 }
 img:hover {
-	border-color: var(--purple);
-	box-shadow: var(--box-shadow-purple);
+	border-color: var(--accent);
+	box-shadow: var(--box-shadow);
 	transform: scale(1.02);
 }
 code {
@@ -189,7 +175,7 @@ hr {
 	background: linear-gradient(90deg,
 		transparent,
 		var(--accent) 20%,
-		var(--purple) 50%,
+		var(--accent) 50%,
 		var(--accent) 80%,
 		transparent);
 	box-shadow: 0 0 10px rgba(0, 255, 65, 0.5);
@@ -230,7 +216,7 @@ hr {
 	}
 	20% {
 		transform: translate(-2px, 1px);
-		text-shadow: -2px 0 var(--accent), 2px 0 var(--purple), var(--text-glow-green);
+		text-shadow: -2px 0 var(--accent), 2px 0 var(--accent), var(--text-glow-green);
 	}
 	40% {
 		transform: translate(1px, -1px);
@@ -238,7 +224,7 @@ hr {
 	}
 	60% {
 		transform: translate(-1px, 2px);
-		text-shadow: 1px 0 var(--purple), -1px 0 var(--accent), var(--text-glow-green);
+		text-shadow: 1px 0 var(--accent), -1px 0 var(--accent), var(--text-glow-green);
 	}
 	80% {
 		transform: translate(0);
@@ -252,11 +238,11 @@ hr {
 	}
 	10% {
 		transform: translate(-3px, 2px) skew(-2deg);
-		text-shadow: -3px 0 var(--accent), 3px 0 var(--purple);
+		text-shadow: -3px 0 var(--accent), 3px 0 var(--accent);
 	}
 	20% {
 		transform: translate(2px, -2px) skew(1deg);
-		text-shadow: 2px 0 var(--purple), -2px 0 var(--accent);
+		text-shadow: 2px 0 var(--accent), -2px 0 var(--accent);
 	}
 	30% {
 		transform: translate(-2px, 1px) skew(-1deg);
@@ -266,7 +252,7 @@ hr {
 	}
 	50% {
 		transform: translate(1px, -1px) skew(0.5deg);
-		text-shadow: 1px 0 var(--accent), -1px 0 var(--purple);
+		text-shadow: 1px 0 var(--accent), -1px 0 var(--accent);
 	}
 	70% {
 		transform: translate(-1px, 1px) skew(-0.5deg);
@@ -278,10 +264,10 @@ hr {
 		text-shadow: var(--text-glow-green);
 	}
 	33% {
-		text-shadow: -2px 0 var(--accent), 2px 0 var(--purple), var(--text-glow-green);
+		text-shadow: -2px 0 var(--accent), 2px 0 var(--accent), var(--text-glow-green);
 	}
 	66% {
-		text-shadow: 2px 0 var(--accent), -2px 0 var(--purple), var(--text-glow-green);
+		text-shadow: 2px 0 var(--accent), -2px 0 var(--accent), var(--text-glow-green);
 	}
 }
 
