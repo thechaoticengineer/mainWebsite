@@ -46,17 +46,32 @@ import HeaderLink from './HeaderLink.astro';
 	header {
 		margin: 0;
 		padding: 0 1em;
-		background: white;
-		box-shadow: 0 2px 8px rgba(var(--black), 5%);
+		background: rgba(var(--black), 0.95);
+		backdrop-filter: blur(10px);
+		box-shadow:
+			0 2px 8px rgba(0, 255, 65, 0.2),
+			0 0 20px rgba(0, 255, 65, 0.1);
+		border-bottom: 1px solid rgba(0, 255, 65, 0.3);
+		position: sticky;
+		top: 0;
+		z-index: 100;
 	}
 	h2 {
 		margin: 0;
 		font-size: 1em;
+		animation: none;
 	}
 
 	h2 a,
 	h2 a.active {
 		text-decoration: none;
+		color: var(--accent);
+		text-shadow: var(--text-glow-green);
+		font-weight: 700;
+		letter-spacing: 2px;
+	}
+	h2 a:hover {
+		animation: glitch-intense 0.3s ease;
 	}
 	nav {
 		display: flex;
@@ -65,17 +80,35 @@ import HeaderLink from './HeaderLink.astro';
 	}
 	nav a {
 		padding: 1em 0.5em;
-		color: var(--black);
+		color: rgb(var(--gray-dark));
 		border-bottom: 4px solid transparent;
 		text-decoration: none;
+		text-shadow: 0 0 2px rgba(0, 255, 65, 0.4);
+		transition: all 0.3s ease;
+	}
+	nav a:hover {
+		color: var(--accent);
+		text-shadow: var(--text-glow-green);
+		border-bottom-color: var(--accent);
 	}
 	nav a.active {
 		text-decoration: none;
-		border-bottom-color: var(--accent);
+		border-bottom-color: var(--purple);
+		color: var(--purple);
+		text-shadow: var(--text-glow-purple);
 	}
 	.social-links,
 	.social-links a {
 		display: flex;
+	}
+	.social-links a {
+		color: rgb(var(--gray-dark));
+		transition: all 0.3s ease;
+	}
+	.social-links a:hover {
+		color: var(--accent);
+		filter: drop-shadow(0 0 5px var(--accent));
+		transform: translateY(-2px);
 	}
 	@media (max-width: 720px) {
 		.social-links {

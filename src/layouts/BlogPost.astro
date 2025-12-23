@@ -19,6 +19,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 				width: calc(100% - 2em);
 				max-width: 100%;
 				margin: 0;
+				background: rgba(var(--black), 0.8);
 			}
 			.hero-image {
 				width: 100%;
@@ -28,6 +29,12 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 				margin: 0 auto;
 				border-radius: 12px;
 				box-shadow: var(--box-shadow);
+				border: 2px solid rgba(0, 255, 65, 0.3);
+				transition: all 0.3s ease;
+			}
+			.hero-image img:hover {
+				box-shadow: var(--box-shadow-purple);
+				border-color: var(--purple);
 			}
 			.prose {
 				width: 720px;
@@ -41,16 +48,22 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 				padding: 1em 0;
 				text-align: center;
 				line-height: 1;
+				border-bottom: 2px solid rgba(0, 255, 65, 0.2);
 			}
 			.title h1 {
 				margin: 0 0 0.5em 0;
+				animation: glitch-subtle 6s infinite;
 			}
 			.date {
 				margin-bottom: 0.5em;
-				color: rgb(var(--gray));
+				color: var(--accent);
+				text-shadow: 0 0 5px rgba(0, 255, 65, 0.4);
+				font-family: 'Courier New', monospace;
+				letter-spacing: 1px;
 			}
 			.last-updated-on {
 				font-style: italic;
+				color: var(--purple);
 			}
 		</style>
 	</head>
