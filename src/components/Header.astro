@@ -76,9 +76,15 @@ import HeaderLink from './HeaderLink.astro';
 		animation: glitch-intense 0.3s ease;
 	}
 	nav {
-		display: flex;
+		display: grid;
+		grid-template-columns: 1fr auto 1fr;
 		align-items: center;
-		justify-content: space-between;
+	}
+	h2 {
+		justify-self: start;
+	}
+	.internal-links {
+		justify-self: center;
 	}
 	nav a {
 		padding: 1em 0.5em;
