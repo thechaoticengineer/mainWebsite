@@ -699,6 +699,3399 @@
           ]
         }
       ]
+    },
+    {
+      "type": "frame",
+      "id": "Zvuou",
+      "x": 1540,
+      "y": 0,
+      "name": "Blog Index - Desktop",
+      "width": 1440,
+      "fill": "$surface-inverse",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "BO0DB",
+          "name": "Navigation",
+          "width": "fill_container",
+          "fill": "#0A0A0FE6",
+          "padding": [
+            16,
+            48
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "K8xy0",
+              "name": "logo",
+              "fill": "$accent-primary",
+              "content": "The Chaotic Engineer",
+              "fontFamily": "Geist Mono",
+              "fontSize": 18,
+              "fontWeight": "700"
+            },
+            {
+              "type": "frame",
+              "id": "MKpvH",
+              "name": "links",
+              "gap": 32,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "Ry49U",
+                  "name": "l1",
+                  "fill": "$foreground-inverse",
+                  "content": "Home",
+                  "fontFamily": "Geist",
+                  "fontSize": 14,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "NTJUy",
+                  "name": "l2",
+                  "fill": "$accent-primary",
+                  "content": "Blog",
+                  "fontFamily": "Geist",
+                  "fontSize": 14,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "n6tMg",
+                  "name": "l3",
+                  "fill": "$foreground-inverse",
+                  "content": "About",
+                  "fontFamily": "Geist",
+                  "fontSize": 14,
+                  "fontWeight": "500"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "6QOZF",
+          "name": "Blog Header",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 16,
+          "padding": [
+            64,
+            120
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "EAkdO",
+              "name": "eyebrow",
+              "fill": "$accent-primary",
+              "content": "BLOG",
+              "fontFamily": "IBM Plex Mono",
+              "fontSize": 12,
+              "fontWeight": "500",
+              "letterSpacing": 3
+            },
+            {
+              "type": "text",
+              "id": "NLUni",
+              "name": "title",
+              "fill": "$foreground-inverse",
+              "content": "All Posts",
+              "fontFamily": "Geist Mono",
+              "fontSize": 48,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "U5JFZ",
+              "name": "subtitle",
+              "fill": "$foreground-muted",
+              "textGrowth": "fixed-width",
+              "width": 600,
+              "content": "Thoughts on engineering culture, team dynamics, and the chaos of building software.",
+              "lineHeight": 1.6,
+              "textAlign": "center",
+              "fontFamily": "Geist",
+              "fontSize": 18,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "bJZwQ",
+          "name": "Blog Grid",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 32,
+          "padding": [
+            0,
+            120,
+            80,
+            120
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "Fn2aK",
+              "name": "Featured Post",
+              "clip": true,
+              "width": "fill_container",
+              "height": 360,
+              "fill": "#111115",
+              "cornerRadius": 12,
+              "effect": {
+                "type": "shadow",
+                "shadowType": "outer",
+                "color": "#00FF4120",
+                "offset": {
+                  "x": 0,
+                  "y": 4
+                },
+                "blur": 20
+              },
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "dVaVk",
+                  "name": "Featured Image",
+                  "clip": true,
+                  "width": 560,
+                  "height": "fill_container",
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "./images/generated-1774650987688.png",
+                    "mode": "fill"
+                  }
+                },
+                {
+                  "type": "frame",
+                  "id": "EpdsZ",
+                  "name": "Featured Body",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 16,
+                  "padding": 32,
+                  "justifyContent": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "kru4Y",
+                      "name": "featBadge",
+                      "fill": "#00FF4120",
+                      "cornerRadius": 9999,
+                      "padding": [
+                        4,
+                        12
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "fJZN4",
+                          "name": "featBadgeT",
+                          "fill": "$accent-primary",
+                          "content": "LATEST",
+                          "fontFamily": "IBM Plex Mono",
+                          "fontSize": 11,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "IFdwh",
+                      "name": "featDate",
+                      "fill": "$accent-dark",
+                      "content": "March 16, 2026",
+                      "fontFamily": "IBM Plex Mono",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "ynIOr",
+                      "name": "featTitle",
+                      "fill": "$foreground-inverse",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "How I Built and Deployed This Site",
+                      "fontFamily": "Geist Mono",
+                      "fontSize": 28,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "2EnSO",
+                      "name": "featDesc",
+                      "fill": "$foreground-muted",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "A deep dive into the Astro framework, GitHub Pages deployment, and the design decisions behind this blog.",
+                      "lineHeight": 1.6,
+                      "fontFamily": "Geist",
+                      "fontSize": 16,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "glUC0",
+                      "name": "featLink",
+                      "fill": "$accent-primary",
+                      "content": "Read more →",
+                      "fontFamily": "Geist",
+                      "fontSize": 14,
+                      "fontWeight": "600"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "bmOcJ",
+              "name": "Cards Row",
+              "width": "fill_container",
+              "gap": 32,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "SFISG",
+                  "name": "Card Culture",
+                  "clip": true,
+                  "width": "fill_container",
+                  "fill": "#111115",
+                  "cornerRadius": 12,
+                  "effect": {
+                    "type": "shadow",
+                    "shadowType": "outer",
+                    "color": "#00FF4120",
+                    "offset": {
+                      "x": 0,
+                      "y": 4
+                    },
+                    "blur": 20
+                  },
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "jgx5P",
+                      "name": "c1img",
+                      "clip": true,
+                      "width": "fill_container",
+                      "height": 200,
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "./images/generated-1774651011041.png",
+                        "mode": "fill"
+                      }
+                    },
+                    {
+                      "type": "frame",
+                      "id": "iBkVY",
+                      "name": "c1body",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 12,
+                      "padding": 24,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "MN8b5",
+                          "name": "c1d",
+                          "fill": "$accent-dark",
+                          "content": "March 10, 2026",
+                          "fontFamily": "IBM Plex Mono",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "O71hz",
+                          "name": "c1t",
+                          "fill": "$foreground-inverse",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Culture Beats Strategy",
+                          "fontFamily": "Geist Mono",
+                          "fontSize": 18,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "Uk0WD",
+                          "name": "c1desc",
+                          "fill": "$foreground-muted",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Why what you tolerate matters more than what you plan. On team dynamics and real performance.",
+                          "lineHeight": 1.5,
+                          "fontFamily": "Geist",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "5CCjo",
+                          "name": "c1link",
+                          "fill": "$accent-primary",
+                          "content": "Read more →",
+                          "fontFamily": "Geist",
+                          "fontSize": 14,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "RjjYU",
+                  "name": "Card Metrics",
+                  "clip": true,
+                  "width": "fill_container",
+                  "fill": "#111115",
+                  "cornerRadius": 12,
+                  "effect": {
+                    "type": "shadow",
+                    "shadowType": "outer",
+                    "color": "#00FF4120",
+                    "offset": {
+                      "x": 0,
+                      "y": 4
+                    },
+                    "blur": 20
+                  },
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "wxcld",
+                      "name": "c2img",
+                      "clip": true,
+                      "width": "fill_container",
+                      "height": 200,
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "./images/generated-1774651032222.png",
+                        "mode": "fill"
+                      }
+                    },
+                    {
+                      "type": "frame",
+                      "id": "DyCHp",
+                      "name": "c2body",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 12,
+                      "padding": 24,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "rMFa8",
+                          "name": "c2d",
+                          "fill": "$accent-dark",
+                          "content": "March 10, 2026",
+                          "fontFamily": "IBM Plex Mono",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "CVw3d",
+                          "name": "c2t",
+                          "fill": "$foreground-inverse",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "What Companies Really Measure",
+                          "fontFamily": "Geist Mono",
+                          "fontSize": 18,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "ZTexe",
+                          "name": "c2desc",
+                          "fill": "$foreground-muted",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "The gap between corporate values and actual metrics. Why obsessing over productivity prevents real improvement.",
+                          "lineHeight": 1.5,
+                          "fontFamily": "Geist",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "VBRpy",
+                          "name": "c2link",
+                          "fill": "$accent-primary",
+                          "content": "Read more →",
+                          "fontFamily": "Geist",
+                          "fontSize": 14,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "rectangle",
+          "id": "LZJ0j",
+          "name": "Divider",
+          "fill": "$border-subtle",
+          "width": "fill_container",
+          "height": 1
+        },
+        {
+          "type": "frame",
+          "id": "uBghz",
+          "name": "Footer",
+          "width": "fill_container",
+          "padding": [
+            32,
+            120
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "8NqcH",
+              "name": "ftL",
+              "fill": "$foreground-muted",
+              "content": "© 2026 The Chaotic Engineer. All rights reserved.",
+              "fontFamily": "Geist",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "aSepY",
+              "name": "ftR",
+              "gap": 24,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "s47Nr",
+                  "name": "f1",
+                  "fill": "$accent-dark",
+                  "content": "RSS",
+                  "fontFamily": "IBM Plex Mono",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "5u0LC",
+                  "name": "f2",
+                  "fill": "$accent-dark",
+                  "content": "GitHub",
+                  "fontFamily": "IBM Plex Mono",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "XGrCX",
+                  "name": "f3",
+                  "fill": "$accent-dark",
+                  "content": "Sitemap",
+                  "fontFamily": "IBM Plex Mono",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "meSbi",
+      "x": 3080,
+      "y": 0,
+      "name": "Blog Post - Desktop",
+      "width": 1440,
+      "fill": "$surface-inverse",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "fK9FG",
+          "name": "Navigation",
+          "width": "fill_container",
+          "fill": "#0A0A0FE6",
+          "padding": [
+            16,
+            48
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "Hj1Ji",
+              "name": "logo",
+              "fill": "$accent-primary",
+              "content": "The Chaotic Engineer",
+              "fontFamily": "Geist Mono",
+              "fontSize": 18,
+              "fontWeight": "700"
+            },
+            {
+              "type": "frame",
+              "id": "qDxhO",
+              "name": "links",
+              "gap": 32,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "8zH5i",
+                  "name": "l1",
+                  "fill": "$foreground-inverse",
+                  "content": "Home",
+                  "fontFamily": "Geist",
+                  "fontSize": 14,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "AfCna",
+                  "name": "l2",
+                  "fill": "$accent-primary",
+                  "content": "Blog",
+                  "fontFamily": "Geist",
+                  "fontSize": 14,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "Za8i0",
+                  "name": "l3",
+                  "fill": "$foreground-inverse",
+                  "content": "About",
+                  "fontFamily": "Geist",
+                  "fontSize": 14,
+                  "fontWeight": "500"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "vKufl",
+          "name": "Hero Image",
+          "clip": true,
+          "width": "fill_container",
+          "height": 400,
+          "fill": {
+            "type": "image",
+            "enabled": true,
+            "url": "./images/generated-1774651073972.png",
+            "mode": "fill"
+          },
+          "children": [
+            {
+              "type": "rectangle",
+              "id": "Tyro0",
+              "layoutPosition": "absolute",
+              "x": 0,
+              "y": 0,
+              "name": "heroOverlay",
+              "fill": {
+                "type": "gradient",
+                "gradientType": "linear",
+                "enabled": true,
+                "rotation": 0,
+                "size": {
+                  "height": 1
+                },
+                "colors": [
+                  {
+                    "color": "#0A0A0F00",
+                    "position": 0
+                  },
+                  {
+                    "color": "#0A0A0FFF",
+                    "position": 1
+                  }
+                ]
+              },
+              "width": "fill_container(0)",
+              "height": "fill_container(0)"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "LFs00",
+          "name": "Article Content",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 24,
+          "padding": [
+            48,
+            360
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "dvvGL",
+              "name": "meta",
+              "gap": 16,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "OjciA",
+                  "name": "metaDate",
+                  "fill": "$accent-dark",
+                  "content": "March 16, 2026",
+                  "fontFamily": "IBM Plex Mono",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "8LL1U",
+                  "name": "metaDot",
+                  "fill": "$foreground-muted",
+                  "content": "·",
+                  "fontFamily": "Geist",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "9egMD",
+                  "name": "metaRead",
+                  "fill": "$foreground-muted",
+                  "content": "5 min read",
+                  "fontFamily": "IBM Plex Mono",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "e6C5u",
+              "name": "artTitle",
+              "fill": "$foreground-inverse",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "How I Built and Deployed This Site",
+              "lineHeight": 1.2,
+              "fontFamily": "Geist Mono",
+              "fontSize": 42,
+              "fontWeight": "700"
+            },
+            {
+              "type": "rectangle",
+              "id": "kVL4L",
+              "name": "artDivider",
+              "fill": "$border-subtle",
+              "width": "fill_container",
+              "height": 1
+            },
+            {
+              "type": "text",
+              "id": "9sQVz",
+              "name": "artP1",
+              "fill": "$foreground-inverse",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "When I decided to create a personal blog, I had a few key requirements in mind. I wanted something fast, minimal, and easy to maintain. After evaluating several options, I landed on Astro — a modern static site generator that ships zero JavaScript by default.",
+              "lineHeight": 1.8,
+              "fontFamily": "Geist",
+              "fontSize": 17,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "rsCWP",
+              "name": "artH2",
+              "fill": "$accent-primary",
+              "content": "Why Astro?",
+              "fontFamily": "Geist Mono",
+              "fontSize": 28,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "ME9iF",
+              "name": "artP2",
+              "fill": "$foreground-inverse",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Astro is built for content-driven websites. It supports Markdown and MDX out of the box, generates static HTML at build time, and achieves perfect Lighthouse scores. The island architecture means you only ship JavaScript when you actually need interactivity.",
+              "lineHeight": 1.8,
+              "fontFamily": "Geist",
+              "fontSize": 17,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "h9zAU",
+              "name": "Code Block",
+              "width": "fill_container",
+              "fill": "#0D0D12",
+              "cornerRadius": 8,
+              "stroke": {
+                "thickness": 1,
+                "fill": "$border-subtle"
+              },
+              "layout": "vertical",
+              "padding": 24,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "NYbka",
+                  "name": "codeLang",
+                  "fill": "$accent-dark",
+                  "content": "astro.config.mjs",
+                  "fontFamily": "IBM Plex Mono",
+                  "fontSize": 11,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "CDbVo",
+                  "name": "codeContent",
+                  "fill": "$accent-primary",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "import { defineConfig } from 'astro/config';\nimport mdx from '@astrojs/mdx';\nimport sitemap from '@astrojs/sitemap';\n\nexport default defineConfig({\n  site: 'https://thechaotic.engineer',\n  integrations: [mdx(), sitemap()],\n});",
+                  "lineHeight": 1.7,
+                  "fontFamily": "IBM Plex Mono",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "mCzsz",
+              "name": "artH3",
+              "fill": "$accent-primary",
+              "content": "Deployment with GitHub Actions",
+              "fontFamily": "Geist Mono",
+              "fontSize": 28,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "0ZGCA",
+              "name": "artP3",
+              "fill": "$foreground-inverse",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "The deployment pipeline is fully automated. Every push to the main branch triggers a GitHub Action that builds the site and deploys it to GitHub Pages. The custom domain thechaotic.engineer is configured via a CNAME record.",
+              "lineHeight": 1.8,
+              "fontFamily": "Geist",
+              "fontSize": 17,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "rectangle",
+              "id": "NhQIJ",
+              "name": "artDiv2",
+              "fill": "$border-subtle",
+              "width": "fill_container",
+              "height": 1
+            },
+            {
+              "type": "text",
+              "id": "snr68",
+              "name": "backLink",
+              "fill": "$accent-primary",
+              "content": "← Back to all posts",
+              "fontFamily": "Geist",
+              "fontSize": 14,
+              "fontWeight": "600"
+            }
+          ]
+        },
+        {
+          "type": "rectangle",
+          "id": "h4ZqB",
+          "name": "div",
+          "fill": "$border-subtle",
+          "width": "fill_container",
+          "height": 1
+        },
+        {
+          "type": "frame",
+          "id": "m3hRc",
+          "name": "Footer",
+          "width": "fill_container",
+          "padding": [
+            32,
+            120
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "D4oE2",
+              "name": "ftL",
+              "fill": "$foreground-muted",
+              "content": "© 2026 The Chaotic Engineer. All rights reserved.",
+              "fontFamily": "Geist",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "R4jzk",
+              "name": "ftR",
+              "gap": 24,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "DIO8E",
+                  "name": "f1",
+                  "fill": "$accent-dark",
+                  "content": "RSS",
+                  "fontFamily": "IBM Plex Mono",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "WrACK",
+                  "name": "f2",
+                  "fill": "$accent-dark",
+                  "content": "GitHub",
+                  "fontFamily": "IBM Plex Mono",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "qiPkI",
+                  "name": "f3",
+                  "fill": "$accent-dark",
+                  "content": "Sitemap",
+                  "fontFamily": "IBM Plex Mono",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "ky1Xs",
+      "x": 4620,
+      "y": 0,
+      "name": "About - Desktop",
+      "width": 1440,
+      "fill": "$surface-inverse",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "rP2LX",
+          "name": "Navigation",
+          "width": "fill_container",
+          "fill": "#0A0A0FE6",
+          "padding": [
+            16,
+            48
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "wWrvm",
+              "name": "logo",
+              "fill": "$accent-primary",
+              "content": "The Chaotic Engineer",
+              "fontFamily": "Geist Mono",
+              "fontSize": 18,
+              "fontWeight": "700"
+            },
+            {
+              "type": "frame",
+              "id": "WsFNH",
+              "name": "links",
+              "gap": 32,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "m2YT1",
+                  "name": "l1",
+                  "fill": "$foreground-inverse",
+                  "content": "Home",
+                  "fontFamily": "Geist",
+                  "fontSize": 14,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "ExPeB",
+                  "name": "l2",
+                  "fill": "$foreground-inverse",
+                  "content": "Blog",
+                  "fontFamily": "Geist",
+                  "fontSize": 14,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "n952T",
+                  "name": "l3",
+                  "fill": "$accent-primary",
+                  "content": "About",
+                  "fontFamily": "Geist",
+                  "fontSize": 14,
+                  "fontWeight": "500"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "jC8Tt",
+          "name": "About Hero",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 16,
+          "padding": [
+            80,
+            120
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "OMJ8t",
+              "name": "eyebrow",
+              "fill": "$accent-primary",
+              "content": "ABOUT",
+              "fontFamily": "IBM Plex Mono",
+              "fontSize": 12,
+              "fontWeight": "500",
+              "letterSpacing": 3
+            },
+            {
+              "type": "text",
+              "id": "5bq2t",
+              "name": "title",
+              "fill": "$foreground-inverse",
+              "textGrowth": "fixed-width",
+              "width": 800,
+              "content": "The Engineer Behind the Chaos",
+              "textAlign": "center",
+              "fontFamily": "Geist Mono",
+              "fontSize": 48,
+              "fontWeight": "700"
+            }
+          ]
+        },
+        {
+          "type": "rectangle",
+          "id": "ejr5L",
+          "name": "div1",
+          "fill": "$border-subtle",
+          "width": "fill_container",
+          "height": 1
+        },
+        {
+          "type": "frame",
+          "id": "oZc99",
+          "name": "Bio Section",
+          "width": "fill_container",
+          "gap": 64,
+          "padding": [
+            64,
+            120
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "bloXY",
+              "name": "Profile Image",
+              "clip": true,
+              "width": 350,
+              "height": 400,
+              "fill": {
+                "type": "image",
+                "enabled": true,
+                "url": "./images/generated-1774651143597.png",
+                "mode": "fill"
+              },
+              "cornerRadius": 12,
+              "effect": {
+                "type": "shadow",
+                "shadowType": "outer",
+                "color": "#00FF4140",
+                "offset": {
+                  "x": 0,
+                  "y": 8
+                },
+                "blur": 32
+              }
+            },
+            {
+              "type": "frame",
+              "id": "dvjOu",
+              "name": "Bio Content",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 24,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "x1GfA",
+                  "name": "bioTitle",
+                  "fill": "$foreground-inverse",
+                  "content": "Hi, I'm Lukasz",
+                  "fontFamily": "Geist Mono",
+                  "fontSize": 32,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "hgGDd",
+                  "name": "bioP1",
+                  "fill": "$foreground-muted",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "I've been a software engineer since 2017, working primarily with .NET, Angular, React, and Blazor. I'm passionate about clean code, solid architecture patterns, and the open-source ecosystem.",
+                  "lineHeight": 1.7,
+                  "fontFamily": "Geist",
+                  "fontSize": 16,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "tuNxL",
+                  "name": "bioP2",
+                  "fill": "$foreground-muted",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "This blog is my space to share thoughts that go beyond just code. It's about the people, the processes, and the patterns that make great engineering teams. I believe that culture eats strategy for breakfast, and that the best software is built by teams that trust each other.",
+                  "lineHeight": 1.7,
+                  "fontFamily": "Geist",
+                  "fontSize": 16,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "rectangle",
+          "id": "xo9Jo",
+          "name": "div2",
+          "fill": "$border-subtle",
+          "width": "fill_container",
+          "height": 1
+        },
+        {
+          "type": "frame",
+          "id": "mDUjQ",
+          "name": "Tech Stack",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 32,
+          "padding": [
+            64,
+            120
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "ioMv1",
+              "name": "techTitle",
+              "fill": "$foreground-inverse",
+              "content": "Tech I Work With",
+              "fontFamily": "Geist Mono",
+              "fontSize": 28,
+              "fontWeight": "700"
+            },
+            {
+              "type": "frame",
+              "id": "tSTzl",
+              "name": "techGrid",
+              "gap": 24,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "Pq0zN",
+                  "name": "t1",
+                  "fill": "#111115",
+                  "cornerRadius": 8,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "$border-subtle"
+                  },
+                  "padding": [
+                    10,
+                    20
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "rheGS",
+                      "name": "t1t",
+                      "fill": "$accent-primary",
+                      "content": ".NET",
+                      "fontFamily": "IBM Plex Mono",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "Iq9Mw",
+                  "name": "t2",
+                  "fill": "#111115",
+                  "cornerRadius": 8,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "$border-subtle"
+                  },
+                  "padding": [
+                    10,
+                    20
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "EIkZp",
+                      "name": "t2t",
+                      "fill": "$accent-primary",
+                      "content": "Angular",
+                      "fontFamily": "IBM Plex Mono",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "SRnF3",
+                  "name": "t3",
+                  "fill": "#111115",
+                  "cornerRadius": 8,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "$border-subtle"
+                  },
+                  "padding": [
+                    10,
+                    20
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "zRcHk",
+                      "name": "t3t",
+                      "fill": "$accent-primary",
+                      "content": "React",
+                      "fontFamily": "IBM Plex Mono",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "gYvrF",
+                  "name": "t4",
+                  "fill": "#111115",
+                  "cornerRadius": 8,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "$border-subtle"
+                  },
+                  "padding": [
+                    10,
+                    20
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "SmHqz",
+                      "name": "t4t",
+                      "fill": "$accent-primary",
+                      "content": "Blazor",
+                      "fontFamily": "IBM Plex Mono",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "0gHD3",
+                  "name": "t5",
+                  "fill": "#111115",
+                  "cornerRadius": 8,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "$border-subtle"
+                  },
+                  "padding": [
+                    10,
+                    20
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "XQqdg",
+                      "name": "t5t",
+                      "fill": "$accent-primary",
+                      "content": "Astro",
+                      "fontFamily": "IBM Plex Mono",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "rectangle",
+          "id": "fN790",
+          "name": "div3",
+          "fill": "$border-subtle",
+          "width": "fill_container",
+          "height": 1
+        },
+        {
+          "type": "frame",
+          "id": "WOZIh",
+          "name": "Footer",
+          "width": "fill_container",
+          "padding": [
+            32,
+            120
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "vnShC",
+              "name": "ftL",
+              "fill": "$foreground-muted",
+              "content": "© 2026 The Chaotic Engineer. All rights reserved.",
+              "fontFamily": "Geist",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "DtJ5F",
+              "name": "ftR",
+              "gap": 24,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "9pItl",
+                  "name": "f1",
+                  "fill": "$accent-dark",
+                  "content": "RSS",
+                  "fontFamily": "IBM Plex Mono",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "4tKMn",
+                  "name": "f2",
+                  "fill": "$accent-dark",
+                  "content": "GitHub",
+                  "fontFamily": "IBM Plex Mono",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "Pmljh",
+                  "name": "f3",
+                  "fill": "$accent-dark",
+                  "content": "Sitemap",
+                  "fontFamily": "IBM Plex Mono",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "lVrEG",
+      "x": 0,
+      "y": 2120,
+      "name": "Homepage - Mobile",
+      "width": 375,
+      "fill": "$surface-inverse",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "d9Eox",
+          "name": "Mobile Nav",
+          "width": "fill_container",
+          "fill": "#0A0A0FE6",
+          "padding": [
+            14,
+            20
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "FVYHO",
+              "name": "logo",
+              "fill": "$accent-primary",
+              "content": "The Chaotic Engineer",
+              "fontFamily": "Geist Mono",
+              "fontSize": 14,
+              "fontWeight": "700"
+            },
+            {
+              "type": "frame",
+              "id": "luiy6",
+              "name": "hamburger",
+              "width": 24,
+              "layout": "vertical",
+              "gap": 4,
+              "children": [
+                {
+                  "type": "rectangle",
+                  "cornerRadius": 1,
+                  "id": "PwGQt",
+                  "name": "hb1",
+                  "fill": "$accent-primary",
+                  "width": 24,
+                  "height": 2
+                },
+                {
+                  "type": "rectangle",
+                  "cornerRadius": 1,
+                  "id": "GyAUy",
+                  "name": "hb2",
+                  "fill": "$accent-primary",
+                  "width": 24,
+                  "height": 2
+                },
+                {
+                  "type": "rectangle",
+                  "cornerRadius": 1,
+                  "id": "wexva",
+                  "name": "hb3",
+                  "fill": "$accent-primary",
+                  "width": 24,
+                  "height": 2
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "FoX9x",
+          "name": "Mobile Hero",
+          "width": "fill_container",
+          "height": 500,
+          "fill": {
+            "type": "image",
+            "enabled": true,
+            "url": "./images/generated-1774651192213.png",
+            "mode": "fill"
+          },
+          "layout": "vertical",
+          "gap": 20,
+          "padding": [
+            0,
+            24
+          ],
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "rectangle",
+              "id": "LUY5Y",
+              "layoutPosition": "absolute",
+              "x": 0,
+              "y": 0,
+              "name": "overlay",
+              "fill": "#0A0A0FE0",
+              "width": "fill_container(0)",
+              "height": "fill_container(0)"
+            },
+            {
+              "type": "frame",
+              "id": "5ljs6",
+              "name": "heroContent",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 20,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "uoCHK",
+                  "name": "ht",
+                  "fill": "$accent-primary",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "The Chaotic Engineer",
+                  "textAlign": "center",
+                  "fontFamily": "Geist Mono",
+                  "fontSize": 32,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "xGbEr",
+                  "name": "hsub",
+                  "fill": "$text-glow",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Exploring the beautiful chaos of software engineering, one line of code at a time.",
+                  "lineHeight": 1.6,
+                  "textAlign": "center",
+                  "fontFamily": "Geist",
+                  "fontSize": 15,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "412l2",
+                  "name": "btn",
+                  "fill": "$accent-primary",
+                  "cornerRadius": 9999,
+                  "padding": [
+                    12,
+                    24
+                  ],
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "45nVp",
+                      "name": "btnT",
+                      "fill": "$surface-inverse",
+                      "content": "Read the Blog",
+                      "fontFamily": "Geist",
+                      "fontSize": 14,
+                      "fontWeight": "600"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "WWJNJ",
+          "name": "Mobile Blog",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 24,
+          "padding": [
+            48,
+            20
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "sZ2Pq",
+              "name": "bEye",
+              "fill": "$accent-primary",
+              "content": "LATEST POSTS",
+              "fontFamily": "IBM Plex Mono",
+              "fontSize": 11,
+              "fontWeight": "normal",
+              "letterSpacing": 3
+            },
+            {
+              "type": "text",
+              "id": "DXxWo",
+              "name": "bTitle",
+              "fill": "$foreground-inverse",
+              "content": "From the Blog",
+              "fontFamily": "Geist Mono",
+              "fontSize": 28,
+              "fontWeight": "700"
+            },
+            {
+              "type": "frame",
+              "id": "pvDOV",
+              "name": "Mobile Card 1",
+              "clip": true,
+              "width": "fill_container",
+              "fill": "#111115",
+              "cornerRadius": 12,
+              "effect": {
+                "type": "shadow",
+                "shadowType": "outer",
+                "color": "#00FF4120",
+                "offset": {
+                  "x": 0,
+                  "y": 4
+                },
+                "blur": 20
+              },
+              "layout": "vertical",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "2fWbS",
+                  "name": "mc1img",
+                  "clip": true,
+                  "width": "fill_container",
+                  "height": 160,
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "./images/generated-1774651218910.png",
+                    "mode": "fill"
+                  }
+                },
+                {
+                  "type": "frame",
+                  "id": "YBvaY",
+                  "name": "mc1body",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 8,
+                  "padding": 16,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "eLxlJ",
+                      "name": "mc1d",
+                      "fill": "$accent-dark",
+                      "content": "March 16, 2026",
+                      "fontFamily": "IBM Plex Mono",
+                      "fontSize": 11,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "LjHCm",
+                      "name": "mc1t",
+                      "fill": "$foreground-inverse",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "How I Built and Deployed This Site",
+                      "fontFamily": "Geist Mono",
+                      "fontSize": 15,
+                      "fontWeight": "600"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "sfWBy",
+              "name": "Mobile Card 2",
+              "clip": true,
+              "width": "fill_container",
+              "fill": "#111115",
+              "cornerRadius": 12,
+              "effect": {
+                "type": "shadow",
+                "shadowType": "outer",
+                "color": "#00FF4120",
+                "offset": {
+                  "x": 0,
+                  "y": 4
+                },
+                "blur": 20
+              },
+              "layout": "vertical",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "LHI82",
+                  "name": "mc2img",
+                  "clip": true,
+                  "width": "fill_container",
+                  "height": 160,
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "./images/generated-1774651241660.png",
+                    "mode": "fill"
+                  }
+                },
+                {
+                  "type": "frame",
+                  "id": "z2DYb",
+                  "name": "mc2body",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 8,
+                  "padding": 16,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "4UZOz",
+                      "name": "mc2d",
+                      "fill": "$accent-dark",
+                      "content": "March 10, 2026",
+                      "fontFamily": "IBM Plex Mono",
+                      "fontSize": 11,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "CKeQ7",
+                      "name": "mc2t",
+                      "fill": "$foreground-inverse",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Culture Beats Strategy",
+                      "fontFamily": "Geist Mono",
+                      "fontSize": 15,
+                      "fontWeight": "600"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "ofkGQ",
+              "name": "Mobile Card 3",
+              "clip": true,
+              "width": "fill_container",
+              "fill": "#111115",
+              "cornerRadius": 12,
+              "effect": {
+                "type": "shadow",
+                "shadowType": "outer",
+                "color": "#00FF4120",
+                "offset": {
+                  "x": 0,
+                  "y": 4
+                },
+                "blur": 20
+              },
+              "layout": "vertical",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "ePO1b",
+                  "name": "mc3img",
+                  "clip": true,
+                  "width": "fill_container",
+                  "height": 160,
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "./images/generated-1774651257047.png",
+                    "mode": "fill"
+                  }
+                },
+                {
+                  "type": "frame",
+                  "id": "MfJH1",
+                  "name": "mc3body",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 8,
+                  "padding": 16,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "GeaZ6",
+                      "name": "mc3d",
+                      "fill": "$accent-dark",
+                      "content": "March 10, 2026",
+                      "fontFamily": "IBM Plex Mono",
+                      "fontSize": 11,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "oi6ms",
+                      "name": "mc3t",
+                      "fill": "$foreground-inverse",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "What Companies Really Measure",
+                      "fontFamily": "Geist Mono",
+                      "fontSize": 15,
+                      "fontWeight": "600"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "rectangle",
+          "id": "CjQKU",
+          "name": "div",
+          "fill": "$border-subtle",
+          "width": "fill_container",
+          "height": 1
+        },
+        {
+          "type": "frame",
+          "id": "T8apo",
+          "name": "Mobile About",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 20,
+          "padding": [
+            48,
+            20
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "p3XYP",
+              "name": "aEye",
+              "fill": "$accent-primary",
+              "content": "ABOUT",
+              "fontFamily": "IBM Plex Mono",
+              "fontSize": 11,
+              "fontWeight": "normal",
+              "letterSpacing": 3
+            },
+            {
+              "type": "text",
+              "id": "zerbf",
+              "name": "aTitle",
+              "fill": "$foreground-inverse",
+              "content": "Meet the Engineer",
+              "fontFamily": "Geist Mono",
+              "fontSize": 24,
+              "fontWeight": "700"
+            },
+            {
+              "type": "frame",
+              "id": "h3Zsl",
+              "name": "aImg",
+              "clip": true,
+              "width": 200,
+              "height": 200,
+              "fill": {
+                "type": "image",
+                "enabled": true,
+                "url": "./images/generated-1774651282260.png",
+                "mode": "fill"
+              },
+              "cornerRadius": 12
+            },
+            {
+              "type": "text",
+              "id": "hCGrS",
+              "name": "aText",
+              "fill": "$foreground-muted",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Hi, I'm Lukasz — a software engineer since 2017. This blog is my space to share thoughts on engineering culture, team dynamics, and building software.",
+              "lineHeight": 1.6,
+              "textAlign": "center",
+              "fontFamily": "Geist",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "AiZBR",
+              "name": "aBtn",
+              "cornerRadius": 9999,
+              "stroke": {
+                "thickness": 2,
+                "fill": "$accent-primary"
+              },
+              "padding": [
+                10,
+                24
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "4jlVl",
+                  "name": "aBtnT",
+                  "fill": "$accent-primary",
+                  "content": "Learn More",
+                  "fontFamily": "Geist",
+                  "fontSize": 13,
+                  "fontWeight": "600"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "rectangle",
+          "id": "qz7VY",
+          "name": "div2",
+          "fill": "$border-subtle",
+          "width": "fill_container",
+          "height": 1
+        },
+        {
+          "type": "frame",
+          "id": "fOsOA",
+          "name": "Mobile Footer",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 12,
+          "padding": [
+            24,
+            20
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "EY62j",
+              "name": "ftLinks",
+              "gap": 20,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "msoD8",
+                  "name": "fl1",
+                  "fill": "$accent-dark",
+                  "content": "RSS",
+                  "fontFamily": "IBM Plex Mono",
+                  "fontSize": 11,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "7jXkj",
+                  "name": "fl2",
+                  "fill": "$accent-dark",
+                  "content": "GitHub",
+                  "fontFamily": "IBM Plex Mono",
+                  "fontSize": 11,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "igDUO",
+                  "name": "fl3",
+                  "fill": "$accent-dark",
+                  "content": "Sitemap",
+                  "fontFamily": "IBM Plex Mono",
+                  "fontSize": 11,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "Lrj1Q",
+              "name": "ftC",
+              "fill": "$foreground-muted",
+              "content": "© 2026 The Chaotic Engineer",
+              "fontFamily": "Geist",
+              "fontSize": 11,
+              "fontWeight": "normal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "hy5ac",
+      "x": 475,
+      "y": 2120,
+      "name": "Blog Index - Mobile",
+      "width": 375,
+      "fill": "$surface-inverse",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "SIk86",
+          "name": "Mobile Nav",
+          "width": "fill_container",
+          "fill": "#0A0A0FE6",
+          "padding": [
+            14,
+            20
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "vvT0t",
+              "name": "logo",
+              "fill": "$accent-primary",
+              "content": "The Chaotic Engineer",
+              "fontFamily": "Geist Mono",
+              "fontSize": 14,
+              "fontWeight": "700"
+            },
+            {
+              "type": "frame",
+              "id": "95VEw",
+              "name": "hb",
+              "width": 24,
+              "layout": "vertical",
+              "gap": 4,
+              "children": [
+                {
+                  "type": "rectangle",
+                  "cornerRadius": 1,
+                  "id": "3j40h",
+                  "name": "hb1",
+                  "fill": "$accent-primary",
+                  "width": 24,
+                  "height": 2
+                },
+                {
+                  "type": "rectangle",
+                  "cornerRadius": 1,
+                  "id": "etsKy",
+                  "name": "hb2",
+                  "fill": "$accent-primary",
+                  "width": 24,
+                  "height": 2
+                },
+                {
+                  "type": "rectangle",
+                  "cornerRadius": 1,
+                  "id": "bC6vv",
+                  "name": "hb3",
+                  "fill": "$accent-primary",
+                  "width": 24,
+                  "height": 2
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "Rnywv",
+          "name": "header",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 12,
+          "padding": [
+            48,
+            20
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "zlOgo",
+              "name": "eye",
+              "fill": "$accent-primary",
+              "content": "BLOG",
+              "fontFamily": "IBM Plex Mono",
+              "fontSize": 11,
+              "fontWeight": "normal",
+              "letterSpacing": 3
+            },
+            {
+              "type": "text",
+              "id": "OPnIj",
+              "name": "title",
+              "fill": "$foreground-inverse",
+              "content": "All Posts",
+              "fontFamily": "Geist Mono",
+              "fontSize": 32,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "W1Zis",
+              "name": "sub",
+              "fill": "$foreground-muted",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Thoughts on engineering culture, team dynamics, and the chaos of building software.",
+              "lineHeight": 1.5,
+              "textAlign": "center",
+              "fontFamily": "Geist",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "Gbvdk",
+          "name": "Mobile Cards",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 20,
+          "padding": [
+            0,
+            20,
+            48,
+            20
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "9lV0U",
+              "name": "mc1",
+              "clip": true,
+              "width": "fill_container",
+              "fill": "#111115",
+              "cornerRadius": 12,
+              "effect": {
+                "type": "shadow",
+                "shadowType": "outer",
+                "color": "#00FF4120",
+                "offset": {
+                  "x": 0,
+                  "y": 4
+                },
+                "blur": 20
+              },
+              "layout": "vertical",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "9b1aU",
+                  "name": "mc1img",
+                  "clip": true,
+                  "width": "fill_container",
+                  "height": 160,
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "./images/generated-1774651325609.png",
+                    "mode": "fill"
+                  }
+                },
+                {
+                  "type": "frame",
+                  "id": "9otJe",
+                  "name": "mc1b",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 8,
+                  "padding": 16,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Rpavw",
+                      "name": "mc1d",
+                      "fill": "$accent-dark",
+                      "content": "March 16, 2026",
+                      "fontFamily": "IBM Plex Mono",
+                      "fontSize": 11,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "HCntc",
+                      "name": "mc1t",
+                      "fill": "$foreground-inverse",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "How I Built and Deployed This Site",
+                      "fontFamily": "Geist Mono",
+                      "fontSize": 15,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "G3dyV",
+                      "name": "mc1desc",
+                      "fill": "$foreground-muted",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "A deep dive into Astro, GitHub Pages, and the design decisions behind this blog.",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Geist",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "vNEkH",
+              "name": "mc2",
+              "clip": true,
+              "width": "fill_container",
+              "fill": "#111115",
+              "cornerRadius": 12,
+              "effect": {
+                "type": "shadow",
+                "shadowType": "outer",
+                "color": "#00FF4120",
+                "offset": {
+                  "x": 0,
+                  "y": 4
+                },
+                "blur": 20
+              },
+              "layout": "vertical",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "6YnTK",
+                  "name": "mc2img",
+                  "clip": true,
+                  "width": "fill_container",
+                  "height": 160,
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "./images/generated-1774651356119.png",
+                    "mode": "fill"
+                  }
+                },
+                {
+                  "type": "frame",
+                  "id": "oAyQ2",
+                  "name": "mc2b",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 8,
+                  "padding": 16,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Ev5gc",
+                      "name": "mc2d",
+                      "fill": "$accent-dark",
+                      "content": "March 10, 2026",
+                      "fontFamily": "IBM Plex Mono",
+                      "fontSize": 11,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "rQern",
+                      "name": "mc2t",
+                      "fill": "$foreground-inverse",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Culture Beats Strategy",
+                      "fontFamily": "Geist Mono",
+                      "fontSize": 15,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "PNEGi",
+                      "name": "mc2desc",
+                      "fill": "$foreground-muted",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Why what you tolerate matters more than what you plan.",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Geist",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "H2U8V",
+          "name": "Mobile Cards",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 20,
+          "padding": [
+            0,
+            20,
+            48,
+            20
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "m7UyH",
+              "name": "c1",
+              "clip": true,
+              "width": "fill_container",
+              "fill": "#111115",
+              "cornerRadius": 12,
+              "effect": {
+                "type": "shadow",
+                "shadowType": "outer",
+                "color": "#00FF4120",
+                "offset": {
+                  "x": 0,
+                  "y": 4
+                },
+                "blur": 20
+              },
+              "layout": "vertical",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "Ryl3b",
+                  "name": "c1img",
+                  "clip": true,
+                  "width": "fill_container",
+                  "height": 160,
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "./images/generated-1774651357741.png",
+                    "mode": "fill"
+                  }
+                },
+                {
+                  "type": "frame",
+                  "id": "8yEjk",
+                  "name": "c1b",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 8,
+                  "padding": 16,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "zFwNy",
+                      "name": "c1d",
+                      "fill": "$accent-dark",
+                      "content": "March 16, 2026",
+                      "fontFamily": "IBM Plex Mono",
+                      "fontSize": 11,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "gmBGm",
+                      "name": "c1t",
+                      "fill": "$foreground-inverse",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "How I Built and Deployed This Site",
+                      "fontFamily": "Geist Mono",
+                      "fontSize": 15,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "lmQ51",
+                      "name": "c1desc",
+                      "fill": "$foreground-muted",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "A deep dive into Astro, GitHub Pages, and the design decisions behind this blog.",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Geist",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "PvmcW",
+              "name": "c2",
+              "clip": true,
+              "width": "fill_container",
+              "fill": "#111115",
+              "cornerRadius": 12,
+              "effect": {
+                "type": "shadow",
+                "shadowType": "outer",
+                "color": "#00FF4120",
+                "offset": {
+                  "x": 0,
+                  "y": 4
+                },
+                "blur": 20
+              },
+              "layout": "vertical",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "AsA5e",
+                  "name": "c2img",
+                  "clip": true,
+                  "width": "fill_container",
+                  "height": 160,
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "./images/generated-1774651381318.png",
+                    "mode": "fill"
+                  }
+                },
+                {
+                  "type": "frame",
+                  "id": "Tul5X",
+                  "name": "c2b",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 8,
+                  "padding": 16,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "BRo0q",
+                      "name": "c2d",
+                      "fill": "$accent-dark",
+                      "content": "March 10, 2026",
+                      "fontFamily": "IBM Plex Mono",
+                      "fontSize": 11,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "PEip4",
+                      "name": "c2t",
+                      "fill": "$foreground-inverse",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Culture Beats Strategy",
+                      "fontFamily": "Geist Mono",
+                      "fontSize": 15,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "mdrNX",
+                      "name": "c2desc",
+                      "fill": "$foreground-muted",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Why what you tolerate matters more than what you plan.",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Geist",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "93zHo",
+              "name": "c3",
+              "clip": true,
+              "width": "fill_container",
+              "fill": "#111115",
+              "cornerRadius": 12,
+              "effect": {
+                "type": "shadow",
+                "shadowType": "outer",
+                "color": "#00FF4120",
+                "offset": {
+                  "x": 0,
+                  "y": 4
+                },
+                "blur": 20
+              },
+              "layout": "vertical",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "ZQ75x",
+                  "name": "c3img",
+                  "clip": true,
+                  "width": "fill_container",
+                  "height": 160,
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "./images/generated-1774651395799.png",
+                    "mode": "fill"
+                  }
+                },
+                {
+                  "type": "frame",
+                  "id": "UZg7V",
+                  "name": "c3b",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 8,
+                  "padding": 16,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "xRkm2",
+                      "name": "c3d",
+                      "fill": "$accent-dark",
+                      "content": "March 10, 2026",
+                      "fontFamily": "IBM Plex Mono",
+                      "fontSize": 11,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "QOFDi",
+                      "name": "c3t",
+                      "fill": "$foreground-inverse",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "What Companies Really Measure",
+                      "fontFamily": "Geist Mono",
+                      "fontSize": 15,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "CTGm4",
+                      "name": "c3desc",
+                      "fill": "$foreground-muted",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "The gap between corporate values and actual metrics.",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Geist",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "rectangle",
+          "id": "OlIQL",
+          "name": "div",
+          "fill": "$border-subtle",
+          "width": "fill_container",
+          "height": 1
+        },
+        {
+          "type": "frame",
+          "id": "NJ906",
+          "name": "Mobile Footer",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 12,
+          "padding": [
+            24,
+            20
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "cSwfR",
+              "name": "ftL",
+              "gap": 20,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "iWBqp",
+                  "name": "f1",
+                  "fill": "$accent-dark",
+                  "content": "RSS",
+                  "fontFamily": "IBM Plex Mono",
+                  "fontSize": 11,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "zgvES",
+                  "name": "f2",
+                  "fill": "$accent-dark",
+                  "content": "GitHub",
+                  "fontFamily": "IBM Plex Mono",
+                  "fontSize": 11,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "8Kw8c",
+                  "name": "f3",
+                  "fill": "$accent-dark",
+                  "content": "Sitemap",
+                  "fontFamily": "IBM Plex Mono",
+                  "fontSize": 11,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "bbau8",
+              "name": "ftC",
+              "fill": "$foreground-muted",
+              "content": "© 2026 The Chaotic Engineer",
+              "fontFamily": "Geist",
+              "fontSize": 11,
+              "fontWeight": "normal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "IIfdw",
+      "x": 950,
+      "y": 2120,
+      "name": "Blog Post - Mobile",
+      "width": 375,
+      "fill": "$surface-inverse",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "637fN",
+          "name": "Mobile Nav",
+          "width": "fill_container",
+          "fill": "#0A0A0FE6",
+          "padding": [
+            14,
+            20
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "LiNjL",
+              "name": "logo",
+              "fill": "$accent-primary",
+              "content": "The Chaotic Engineer",
+              "fontFamily": "Geist Mono",
+              "fontSize": 14,
+              "fontWeight": "700"
+            },
+            {
+              "type": "frame",
+              "id": "iN5id",
+              "name": "hb",
+              "width": 24,
+              "layout": "vertical",
+              "gap": 4,
+              "children": [
+                {
+                  "type": "rectangle",
+                  "cornerRadius": 1,
+                  "id": "YGRaR",
+                  "name": "hb1",
+                  "fill": "$accent-primary",
+                  "width": 24,
+                  "height": 2
+                },
+                {
+                  "type": "rectangle",
+                  "cornerRadius": 1,
+                  "id": "iMKvX",
+                  "name": "hb2",
+                  "fill": "$accent-primary",
+                  "width": 24,
+                  "height": 2
+                },
+                {
+                  "type": "rectangle",
+                  "cornerRadius": 1,
+                  "id": "tmm4p",
+                  "name": "hb3",
+                  "fill": "$accent-primary",
+                  "width": 24,
+                  "height": 2
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "qFnJW",
+          "name": "Hero Image",
+          "clip": true,
+          "width": "fill_container",
+          "height": 220,
+          "fill": {
+            "type": "image",
+            "enabled": true,
+            "url": "./images/generated-1774651429539.png",
+            "mode": "fill"
+          }
+        },
+        {
+          "type": "frame",
+          "id": "9buUB",
+          "name": "Article",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 20,
+          "padding": [
+            24,
+            20
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "SJGqW",
+              "name": "meta",
+              "gap": 8,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "LWe5d",
+                  "name": "metaD",
+                  "fill": "$accent-dark",
+                  "content": "March 16, 2026",
+                  "fontFamily": "IBM Plex Mono",
+                  "fontSize": 11,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "zZ7zR",
+                  "name": "metaDot",
+                  "fill": "$foreground-muted",
+                  "content": "·",
+                  "fontFamily": "Geist",
+                  "fontSize": 11,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "cUFxK",
+                  "name": "metaR",
+                  "fill": "$foreground-muted",
+                  "content": "5 min read",
+                  "fontFamily": "IBM Plex Mono",
+                  "fontSize": 11,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "YAU9l",
+              "name": "artTitle",
+              "fill": "$foreground-inverse",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "How I Built and Deployed This Site",
+              "lineHeight": 1.2,
+              "fontFamily": "Geist Mono",
+              "fontSize": 26,
+              "fontWeight": "700"
+            },
+            {
+              "type": "rectangle",
+              "id": "0mWNJ",
+              "name": "artDiv",
+              "fill": "$border-subtle",
+              "width": "fill_container",
+              "height": 1
+            },
+            {
+              "type": "text",
+              "id": "61FIo",
+              "name": "artP1",
+              "fill": "$foreground-inverse",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "When I decided to create a personal blog, I had a few key requirements in mind. I wanted something fast, minimal, and easy to maintain. After evaluating several options, I landed on Astro.",
+              "lineHeight": 1.7,
+              "fontFamily": "Geist",
+              "fontSize": 15,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "7PBp9",
+              "name": "artH2",
+              "fill": "$accent-primary",
+              "content": "Why Astro?",
+              "fontFamily": "Geist Mono",
+              "fontSize": 22,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "9BZpu",
+              "name": "artP2",
+              "fill": "$foreground-inverse",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Astro is built for content-driven websites. It supports Markdown and MDX out of the box, generates static HTML at build time, and achieves perfect Lighthouse scores.",
+              "lineHeight": 1.7,
+              "fontFamily": "Geist",
+              "fontSize": 15,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "aKsSd",
+              "name": "Code Block",
+              "width": "fill_container",
+              "fill": "#0D0D12",
+              "cornerRadius": 8,
+              "stroke": {
+                "thickness": 1,
+                "fill": "$border-subtle"
+              },
+              "layout": "vertical",
+              "gap": 8,
+              "padding": 16,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "wlBvt",
+                  "name": "codeLang",
+                  "fill": "$accent-dark",
+                  "content": "astro.config.mjs",
+                  "fontFamily": "IBM Plex Mono",
+                  "fontSize": 10,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "jaVUH",
+                  "name": "codeContent",
+                  "fill": "$accent-primary",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "import { defineConfig } from\n  'astro/config';\nimport mdx from\n  '@astrojs/mdx';\n\nexport default defineConfig({\n  site: 'https://\n    thechaotic.engineer',\n  integrations: [\n    mdx(), sitemap()\n  ],\n});",
+                  "lineHeight": 1.6,
+                  "fontFamily": "IBM Plex Mono",
+                  "fontSize": 11,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "u975m",
+              "name": "artH3",
+              "fill": "$accent-primary",
+              "content": "Deployment",
+              "fontFamily": "Geist Mono",
+              "fontSize": 22,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "jeZaY",
+              "name": "artP3",
+              "fill": "$foreground-inverse",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "The deployment pipeline is fully automated. Every push to main triggers a GitHub Action that builds and deploys to GitHub Pages.",
+              "lineHeight": 1.7,
+              "fontFamily": "Geist",
+              "fontSize": 15,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "rectangle",
+              "id": "YcYvn",
+              "name": "artDiv2",
+              "fill": "$border-subtle",
+              "width": "fill_container",
+              "height": 1
+            },
+            {
+              "type": "text",
+              "id": "YI0nN",
+              "name": "backLink",
+              "fill": "$accent-primary",
+              "content": "← Back to all posts",
+              "fontFamily": "Geist",
+              "fontSize": 13,
+              "fontWeight": "600"
+            }
+          ]
+        },
+        {
+          "type": "rectangle",
+          "id": "qpV5e",
+          "name": "div",
+          "fill": "$border-subtle",
+          "width": "fill_container",
+          "height": 1
+        },
+        {
+          "type": "frame",
+          "id": "3nUnn",
+          "name": "Mobile Footer",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 12,
+          "padding": [
+            24,
+            20
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "J5749",
+              "name": "ftL",
+              "gap": 20,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "TirRg",
+                  "name": "f1",
+                  "fill": "$accent-dark",
+                  "content": "RSS",
+                  "fontFamily": "IBM Plex Mono",
+                  "fontSize": 11,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "nxkW9",
+                  "name": "f2",
+                  "fill": "$accent-dark",
+                  "content": "GitHub",
+                  "fontFamily": "IBM Plex Mono",
+                  "fontSize": 11,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "Gkcxf",
+                  "name": "f3",
+                  "fill": "$accent-dark",
+                  "content": "Sitemap",
+                  "fontFamily": "IBM Plex Mono",
+                  "fontSize": 11,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "NqeL1",
+              "name": "ftC",
+              "fill": "$foreground-muted",
+              "content": "© 2026 The Chaotic Engineer",
+              "fontFamily": "Geist",
+              "fontSize": 11,
+              "fontWeight": "normal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "3Rnw4",
+      "x": 1425,
+      "y": 2120,
+      "name": "About - Mobile",
+      "width": 375,
+      "fill": "$surface-inverse",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "CRWSN",
+          "name": "Mobile Nav",
+          "width": "fill_container",
+          "fill": "#0A0A0FE6",
+          "padding": [
+            14,
+            20
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "jJFy3",
+              "name": "logo",
+              "fill": "$accent-primary",
+              "content": "The Chaotic Engineer",
+              "fontFamily": "Geist Mono",
+              "fontSize": 14,
+              "fontWeight": "700"
+            },
+            {
+              "type": "frame",
+              "id": "jThDv",
+              "name": "hb",
+              "width": 24,
+              "layout": "vertical",
+              "gap": 4,
+              "children": [
+                {
+                  "type": "rectangle",
+                  "cornerRadius": 1,
+                  "id": "FnBIP",
+                  "name": "hb1",
+                  "fill": "$accent-primary",
+                  "width": 24,
+                  "height": 2
+                },
+                {
+                  "type": "rectangle",
+                  "cornerRadius": 1,
+                  "id": "z7QES",
+                  "name": "hb2",
+                  "fill": "$accent-primary",
+                  "width": 24,
+                  "height": 2
+                },
+                {
+                  "type": "rectangle",
+                  "cornerRadius": 1,
+                  "id": "7n4Ba",
+                  "name": "hb3",
+                  "fill": "$accent-primary",
+                  "width": 24,
+                  "height": 2
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "1TQwn",
+          "name": "header",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 12,
+          "padding": [
+            48,
+            20
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "Fq0e7",
+              "name": "eye",
+              "fill": "$accent-primary",
+              "content": "ABOUT",
+              "fontFamily": "IBM Plex Mono",
+              "fontSize": 11,
+              "fontWeight": "normal",
+              "letterSpacing": 3
+            },
+            {
+              "type": "text",
+              "id": "uravq",
+              "name": "title",
+              "fill": "$foreground-inverse",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "The Engineer Behind the Chaos",
+              "textAlign": "center",
+              "fontFamily": "Geist Mono",
+              "fontSize": 26,
+              "fontWeight": "700"
+            }
+          ]
+        },
+        {
+          "type": "rectangle",
+          "id": "r3JNF",
+          "name": "div",
+          "fill": "$border-subtle",
+          "width": "fill_container",
+          "height": 1
+        },
+        {
+          "type": "frame",
+          "id": "H8UWL",
+          "name": "Bio",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 24,
+          "padding": [
+            32,
+            20
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "pXakj",
+              "name": "bioImg",
+              "clip": true,
+              "width": 200,
+              "height": 240,
+              "fill": {
+                "type": "image",
+                "enabled": true,
+                "url": "./images/generated-1774651475594.png",
+                "mode": "fill"
+              },
+              "cornerRadius": 12,
+              "effect": {
+                "type": "shadow",
+                "shadowType": "outer",
+                "color": "#00FF4140",
+                "offset": {
+                  "x": 0,
+                  "y": 8
+                },
+                "blur": 24
+              }
+            },
+            {
+              "type": "text",
+              "id": "HggnZ",
+              "name": "bioTitle",
+              "fill": "$foreground-inverse",
+              "content": "Hi, I'm Lukasz",
+              "fontFamily": "Geist Mono",
+              "fontSize": 24,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "HGig6",
+              "name": "bioP1",
+              "fill": "$foreground-muted",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "I've been a software engineer since 2017, working primarily with .NET, Angular, React, and Blazor. I'm passionate about clean code, architecture patterns, and open-source.",
+              "lineHeight": 1.7,
+              "fontFamily": "Geist",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "d1jiw",
+              "name": "bioP2",
+              "fill": "$foreground-muted",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "This blog is my space to share thoughts that go beyond just code. It's about the people, processes, and patterns that make great engineering teams.",
+              "lineHeight": 1.7,
+              "fontFamily": "Geist",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "rectangle",
+          "id": "mc53x",
+          "name": "div2",
+          "fill": "$border-subtle",
+          "width": "fill_container",
+          "height": 1
+        },
+        {
+          "type": "frame",
+          "id": "WzgLm",
+          "name": "Tech Stack",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 20,
+          "padding": [
+            32,
+            20
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "92txF",
+              "name": "techTitle",
+              "fill": "$foreground-inverse",
+              "content": "Tech I Work With",
+              "fontFamily": "Geist Mono",
+              "fontSize": 20,
+              "fontWeight": "700"
+            },
+            {
+              "type": "frame",
+              "id": "w24uX",
+              "name": "techRow1",
+              "gap": 12,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "KMYRS",
+                  "name": "t1",
+                  "fill": "#111115",
+                  "cornerRadius": 8,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "$border-subtle"
+                  },
+                  "padding": [
+                    8,
+                    16
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "wkrRa",
+                      "name": "t1t",
+                      "fill": "$accent-primary",
+                      "content": ".NET",
+                      "fontFamily": "IBM Plex Mono",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "cH97A",
+                  "name": "t2",
+                  "fill": "#111115",
+                  "cornerRadius": 8,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "$border-subtle"
+                  },
+                  "padding": [
+                    8,
+                    16
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "SBS35",
+                      "name": "t2t",
+                      "fill": "$accent-primary",
+                      "content": "Angular",
+                      "fontFamily": "IBM Plex Mono",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "6d9JY",
+                  "name": "t3",
+                  "fill": "#111115",
+                  "cornerRadius": 8,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "$border-subtle"
+                  },
+                  "padding": [
+                    8,
+                    16
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "ZH3Ix",
+                      "name": "t3t",
+                      "fill": "$accent-primary",
+                      "content": "React",
+                      "fontFamily": "IBM Plex Mono",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "ZJAPd",
+              "name": "techRow2",
+              "gap": 12,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "nlAjw",
+                  "name": "t4",
+                  "fill": "#111115",
+                  "cornerRadius": 8,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "$border-subtle"
+                  },
+                  "padding": [
+                    8,
+                    16
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "oPRxY",
+                      "name": "t4t",
+                      "fill": "$accent-primary",
+                      "content": "Blazor",
+                      "fontFamily": "IBM Plex Mono",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "nsrdh",
+                  "name": "t5",
+                  "fill": "#111115",
+                  "cornerRadius": 8,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "$border-subtle"
+                  },
+                  "padding": [
+                    8,
+                    16
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "sAzM7",
+                      "name": "t5t",
+                      "fill": "$accent-primary",
+                      "content": "Astro",
+                      "fontFamily": "IBM Plex Mono",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "rectangle",
+          "id": "KVE3K",
+          "name": "div3",
+          "fill": "$border-subtle",
+          "width": "fill_container",
+          "height": 1
+        },
+        {
+          "type": "frame",
+          "id": "BxuEl",
+          "name": "Mobile Footer",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 12,
+          "padding": [
+            24,
+            20
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "cYUws",
+              "name": "ftL",
+              "gap": 20,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "HPcC0",
+                  "name": "f1",
+                  "fill": "$accent-dark",
+                  "content": "RSS",
+                  "fontFamily": "IBM Plex Mono",
+                  "fontSize": 11,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "aPTh8",
+                  "name": "f2",
+                  "fill": "$accent-dark",
+                  "content": "GitHub",
+                  "fontFamily": "IBM Plex Mono",
+                  "fontSize": 11,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "OcgtZ",
+                  "name": "f3",
+                  "fill": "$accent-dark",
+                  "content": "Sitemap",
+                  "fontFamily": "IBM Plex Mono",
+                  "fontSize": 11,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "3a0rS",
+              "name": "ftC",
+              "fill": "$foreground-muted",
+              "content": "© 2026 The Chaotic Engineer",
+              "fontFamily": "Geist",
+              "fontSize": 11,
+              "fontWeight": "normal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "fDI0a",
+      "x": 1788.67578125,
+      "y": 692.001220703125,
+      "fill": "#000000",
+      "content": "folder",
+      "fontFamily": "Inter",
+      "fontSize": 12,
+      "fontWeight": "normal"
     }
   ],
   "variables": {
