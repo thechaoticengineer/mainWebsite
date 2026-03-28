@@ -72,6 +72,23 @@ const posts = (await getCollection('blog'))
 				color: var(--text-glow);
 				line-height: 1.6;
 				margin: 0;
+				min-height: 1.6em;
+			}
+			.hero-subtitle::after {
+				content: '\2588';
+				color: var(--accent);
+				animation: blink 800ms step-end infinite;
+				margin-left: 2px;
+			}
+			.hero-subtitle.typing-done::after {
+				animation: blink 800ms step-end 3, fade-out 400ms 2.4s forwards;
+			}
+			@keyframes blink {
+				0%, 100% { opacity: 1; }
+				50% { opacity: 0; }
+			}
+			@keyframes fade-out {
+				to { opacity: 0; }
 			}
 			.hero-buttons {
 				display: flex;
@@ -330,7 +347,7 @@ const posts = (await getCollection('blog'))
 				<div class="hero-overlay"></div>
 				<div class="hero-content">
 					<h1 class="hero-title">The Chaotic Engineer</h1>
-					<p class="hero-subtitle">Exploring the beautiful chaos of software engineering, one line of code at a time.</p>
+					<p class="hero-subtitle" data-text="Exploring the beautiful chaos of software engineering, one line of code at a time."></p>
 					<div class="hero-buttons">
 						<a href="/blog" class="btn-primary">Read the Blog</a>
 						<a href="/about" class="btn-outline">About Me</a>
@@ -393,5 +410,26 @@ const posts = (await getCollection('blog'))
 			<div class="divider"></div>
 		</main>
 		<Footer />
+		<script>
+			const el = document.querySelector<HTMLElement>('.hero-subtitle');
+			if (el) {
+				const text = el.dataset.text ?? '';
+				if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+					el.textContent = text;
+					el.classList.add('typing-done');
+				} else {
+					let i = 0;
+					const type = () => {
+						if (i < text.length) {
+							el.textContent += text[i++];
+							setTimeout(type, 35 + Math.random() * 30);
+						} else {
+							el.classList.add('typing-done');
+						}
+					};
+					setTimeout(type, 600);
+				}
+			}
+		</script>
 	</body>
 </html>
