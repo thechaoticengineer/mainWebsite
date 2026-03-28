@@ -20,7 +20,7 @@ Deploys automatically to GitHub Pages via `.github/workflows/deploy.yml` on push
 
 - **Astro 6** static site with MDX and sitemap integrations
 - **Content collections** defined in `src/content.config.ts` — blog posts live in `src/content/blog/` as Markdown/MDX files
-- Blog post frontmatter schema: `title`, `description`, `pubDate` (required), `updatedDate`, `heroImage` (optional)
+- Blog post frontmatter schema: `title`, `description`, `pubDate` (required), `updatedDate`, `heroImage`, `tags` (optional)
 - **Layouts**: `BlogPost.astro` is the only layout, wrapping blog post content
 - **Components**: `BaseHead.astro` (meta/SEO), `Header.astro` (sticky nav with mobile hamburger menu), `Footer.astro`, `HeaderLink.astro`, `FormattedDate.astro`
 - **Pages**: `index.astro` (homepage), `about.astro`, `blog/index.astro` (listing), `blog/[...slug].astro` (individual posts), `rss.xml.js`
@@ -34,3 +34,27 @@ Deploys automatically to GitHub Pages via `.github/workflows/deploy.yml` on push
 - TypeScript strict mode with `strictNullChecks`
 - No test framework configured
 - No linter configured
+
+## TODO
+
+### Medium effort
+- [ ] `/projects` page — portfolio of personal projects (e.g. shopping list app, this blog) with links to repo/demo
+- [ ] Client-side search with Pagefind (integrates well with Astro static builds)
+- [ ] Newsletter / email subscription — e.g. Buttondown (free tier), form in footer or dedicated page
+- [ ] Typing effect animation on hero section — fits the cyberpunk/terminal aesthetic
+- [ ] Astro View Transitions — built-in page transitions, could do a glitch effect between pages
+
+### Ambitious
+- [ ] `/uses` page — gear, tools, IDE, terminal setup (popular format for dev blogs)
+- [ ] Comments via Giscus (GitHub Discussions-based, zero backend)
+- [ ] Interactive demos — embedded React components in MDX (e.g. shopping list app snippet)
+- [ ] Dark/light theme toggle — keep retro green as default, add a clean light variant
+- [ ] `/now` page — "what I'm doing now" (nownownow.com format)
+- [ ] Post series mechanism — link posts into series with prev/next navigation
+- [ ] Privacy-friendly analytics — Plausible or Umami (self-hosted)
+
+### Content ideas
+- [ ] "My Terminal Setup" (fits the site aesthetic)
+- [ ] "Docker Compose patterns I actually use"
+- [ ] "Why I chose Astro over Next.js"
+- [ ] "Code review etiquette" (bridges technical and culture topics)
