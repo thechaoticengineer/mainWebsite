@@ -41,7 +41,7 @@ Deploys automatically to GitHub Pages via `.github/workflows/deploy.yml` on push
 - [ ] `/projects` page — portfolio of personal projects (e.g. shopping list app, this blog) with links to repo/demo
 - [ ] Client-side search with Pagefind (integrates well with Astro static builds)
 - [ ] Newsletter / email subscription — e.g. Buttondown (free tier), form in footer or dedicated page
-- [ ] Typing effect animation on hero section — fits the cyberpunk/terminal aesthetic
+- [x] Typing effect animation on hero section — fits the cyberpunk/terminal aesthetic
 - [ ] Astro View Transitions — built-in page transitions, could do a glitch effect between pages
 
 ### Ambitious
