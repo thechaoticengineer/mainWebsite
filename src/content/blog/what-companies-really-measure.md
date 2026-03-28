@@ -1,7 +1,8 @@
 ---
 title: 'What Companies Really Measure'
-description: 'If you want to understand a company, don''t listen to what it says. Look at what it measures.'
+description: 'The gap between corporate values and actual metrics. Why obsessing over productivity prevents real improvement.'
 pubDate: '2026-03-10'
+heroImage: '../../assets/blog-what-companies-measure.png'
 ---
 
 If you want to understand a company,

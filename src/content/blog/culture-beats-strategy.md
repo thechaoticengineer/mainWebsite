@@ -1,7 +1,8 @@
 ---
 title: 'Culture Beats Strategy'
-description: 'Everyone talks about strategy, but there is something more important: culture, and right after that, structure.'
+description: 'Why what you tolerate matters more than what you plan. On team dynamics, organizational culture, and real performance.'
 pubDate: '2026-03-10'
+heroImage: '../../assets/blog-culture-beats-strategy.png'
 ---
 
 Everyone talks about strategy, but there is something more important than strategy: culture, and right after that, structure.

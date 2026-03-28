@@ -1,29 +1,373 @@
 ---
+import { Image } from 'astro:assets';
+import { getCollection } from 'astro:content';
 import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
+import FormattedDate from '../components/FormattedDate.astro';
 import Header from '../components/Header.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+import HeroBg from '../assets/hero-bg.png';
+import AboutImage from '../assets/about-preview.png';
+
+const posts = (await getCollection('blog'))
+	.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+	.slice(0, 3);
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<style>
+			/* Hero Section */
+			.hero {
+				position: relative;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				height: 700px;
+				overflow: hidden;
+			}
+			.hero-bg {
+				position: absolute;
+				inset: 0;
+				z-index: 0;
+			}
+			.hero-bg img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				border: none;
+				border-radius: 0;
+			}
+			.hero-overlay {
+				position: absolute;
+				inset: 0;
+				background: rgba(10, 10, 15, 0.88);
+				z-index: 1;
+			}
+			.hero-content {
+				position: relative;
+				z-index: 2;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 24px;
+				max-width: 800px;
+				padding: 0 24px;
+				text-align: center;
+			}
+			.hero-title {
+				font-family: var(--font-mono);
+				font-size: 64px;
+				font-weight: 700;
+				color: var(--accent);
+				text-shadow: var(--text-glow-green);
+				line-height: 1.1;
+				margin: 0;
+			}
+			.hero-subtitle {
+				font-family: var(--font-sans);
+				font-size: 20px;
+				color: var(--text-glow);
+				line-height: 1.6;
+				margin: 0;
+			}
+			.hero-buttons {
+				display: flex;
+				gap: 16px;
+				margin-top: 8px;
+			}
+			.btn-primary {
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				padding: 14px 32px;
+				background: var(--accent);
+				color: var(--surface);
+				font-family: var(--font-sans);
+				font-size: 16px;
+				font-weight: 600;
+				border-radius: 9999px;
+				text-decoration: none;
+				transition: all 0.2s ease;
+			}
+			.btn-primary:hover {
+				box-shadow: 0 0 20px rgba(0, 255, 65, 0.4);
+				text-shadow: none;
+			}
+			.btn-outline {
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				padding: 14px 32px;
+				background: transparent;
+				color: var(--accent);
+				font-family: var(--font-sans);
+				font-size: 16px;
+				font-weight: 600;
+				border: 2px solid var(--accent);
+				border-radius: 9999px;
+				text-decoration: none;
+				transition: all 0.2s ease;
+			}
+			.btn-outline:hover {
+				background: rgba(0, 255, 65, 0.1);
+				box-shadow: 0 0 20px rgba(0, 255, 65, 0.2);
+				text-shadow: none;
+			}
+
+			/* Divider */
+			.divider {
+				height: 1px;
+				background: var(--border);
+			}
+
+			/* Blog Section */
+			.blog-section {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 48px;
+				padding: 80px 120px;
+			}
+			.section-eyebrow {
+				font-family: var(--font-code);
+				font-size: 12px;
+				font-weight: 500;
+				color: var(--accent);
+				letter-spacing: 3px;
+				margin: 0;
+			}
+			.section-title {
+				font-family: var(--font-mono);
+				font-size: 40px;
+				font-weight: 700;
+				color: var(--fg);
+				text-shadow: none;
+				margin: 0;
+			}
+			.blog-grid {
+				display: flex;
+				gap: 32px;
+				width: 100%;
+			}
+			.blog-card {
+				display: flex;
+				flex-direction: column;
+				flex: 1;
+				background: var(--surface-card);
+				border-radius: 12px;
+				overflow: hidden;
+				box-shadow: 0 4px 20px rgba(0, 255, 65, 0.08);
+				text-decoration: none;
+				transition: transform 0.2s ease, box-shadow 0.2s ease;
+			}
+			.blog-card:hover {
+				transform: translateY(-4px);
+				box-shadow: 0 8px 30px rgba(0, 255, 65, 0.15);
+				text-shadow: none;
+			}
+			.card-image {
+				width: 100%;
+				height: 200px;
+				overflow: hidden;
+			}
+			.card-image img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				border: none;
+				border-radius: 0;
+			}
+			.card-body {
+				display: flex;
+				flex-direction: column;
+				gap: 12px;
+				padding: 24px;
+			}
+			.card-date {
+				font-family: var(--font-code);
+				font-size: 12px;
+				color: var(--accent-dark);
+				margin: 0;
+			}
+			.card-title {
+				font-family: var(--font-mono);
+				font-size: 18px;
+				font-weight: 600;
+				color: var(--fg);
+				line-height: 1.3;
+				margin: 0;
+				text-shadow: none;
+			}
+			.card-desc {
+				font-family: var(--font-sans);
+				font-size: 14px;
+				color: var(--fg-muted);
+				line-height: 1.5;
+				margin: 0;
+			}
+
+			/* About Section */
+			.about-section {
+				display: flex;
+				align-items: center;
+				gap: 64px;
+				padding: 80px 120px;
+			}
+			.about-image {
+				flex-shrink: 0;
+				width: 300px;
+				height: 300px;
+				border-radius: 12px;
+				overflow: hidden;
+				box-shadow: 0 8px 32px rgba(0, 255, 65, 0.25);
+			}
+			.about-image img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				border: none;
+				border-radius: 0;
+			}
+			.about-content {
+				display: flex;
+				flex-direction: column;
+				gap: 20px;
+			}
+			.about-title {
+				font-family: var(--font-mono);
+				font-size: 36px;
+				font-weight: 700;
+				color: var(--fg);
+				text-shadow: none;
+				margin: 0;
+			}
+			.about-text {
+				font-family: var(--font-sans);
+				font-size: 16px;
+				color: var(--fg-muted);
+				line-height: 1.7;
+				margin: 0;
+			}
+
+			@media (max-width: 720px) {
+				.hero {
+					height: 500px;
+				}
+				.hero-title {
+					font-size: 32px;
+				}
+				.hero-subtitle {
+					font-size: 15px;
+				}
+				.hero-buttons {
+					flex-direction: column;
+					width: 100%;
+					padding: 0 20px;
+				}
+				.btn-primary, .btn-outline {
+					font-size: 14px;
+					padding: 12px 24px;
+				}
+
+				.blog-section {
+					padding: 48px 20px;
+					gap: 24px;
+				}
+				.section-title {
+					font-size: 28px;
+				}
+				.blog-grid {
+					flex-direction: column;
+					gap: 20px;
+				}
+
+				.about-section {
+					flex-direction: column;
+					padding: 48px 20px;
+					gap: 24px;
+					text-align: center;
+				}
+				.about-image {
+					width: 200px;
+					height: 200px;
+				}
+				.about-title {
+					font-size: 24px;
+				}
+				.about-text {
+					font-size: 14px;
+				}
+			}
+		</style>
 	</head>
 	<body>
 		<Header />
 		<main>
-			<h1>The Chaotic Engineer</h1>
-			<p>
-				Exploring the beautiful chaos of software engineering, one line of code at a time.
-			</p>
-			<p>
-				Writing about engineering culture, team dynamics, and the things that actually matter
-				when building software — beyond the code itself.
-			</p>
-			<p>
-				<a href="/blog">Read the blog &rarr;</a>
-			</p>
+			<!-- Hero -->
+			<section class="hero">
+				<div class="hero-bg">
+					<Image src={HeroBg} alt="" width={1440} height={700} />
+				</div>
+				<div class="hero-overlay"></div>
+				<div class="hero-content">
+					<h1 class="hero-title">The Chaotic Engineer</h1>
+					<p class="hero-subtitle">Exploring the beautiful chaos of software engineering, one line of code at a time.</p>
+					<div class="hero-buttons">
+						<a href="/blog" class="btn-primary">Read the Blog</a>
+						<a href="/about" class="btn-outline">About Me</a>
+					</div>
+				</div>
+			</section>
+
+			<div class="divider"></div>
+
+			<!-- Blog Section -->
+			<section class="blog-section">
+				<span class="section-eyebrow">LATEST POSTS</span>
+				<h2 class="section-title">From the Blog</h2>
+				<div class="blog-grid">
+					{posts.map((post) => (
+						<a href={`/blog/${post.id}/`} class="blog-card">
+							{post.data.heroImage && (
+								<div class="card-image">
+									<Image src={post.data.heroImage} alt="" width={400} height={200} />
+								</div>
+							)}
+							<div class="card-body">
+								<p class="card-date"><FormattedDate date={post.data.pubDate} /></p>
+								<h3 class="card-title">{post.data.title}</h3>
+								<p class="card-desc">{post.data.description}</p>
+							</div>
+						</a>
+					))}
+				</div>
+			</section>
+
+			<div class="divider"></div>
+
+			<!-- About Section -->
+			<section class="about-section">
+				<div class="about-image">
+					<Image src={AboutImage} alt="About" width={300} height={300} />
+				</div>
+				<div class="about-content">
+					<span class="section-eyebrow">ABOUT</span>
+					<h2 class="about-title">Meet the Engineer</h2>
+					<p class="about-text">
+						Hi, I'm Lukasz — a software engineer since 2017, passionate about .NET, Angular, React, and Blazor.
+						This blog is my space to share thoughts on engineering culture, team dynamics, and the beautiful chaos
+						of building software. Beyond just code — it's about the people, processes, and patterns that make great teams.
+					</p>
+					<div>
+						<a href="/about" class="btn-outline">Learn More</a>
+					</div>
+				</div>
+			</section>
+
+			<div class="divider"></div>
 		</main>
 		<Footer />
 	</body>

@@ -1,7 +1,8 @@
 ---
 title: 'How I Built and Deployed This Site'
-description: 'Astro, GitHub Actions, GitHub Pages, and a custom domain. Simple stack, zero hosting cost, full automation.'
+description: 'A deep dive into the Astro framework, GitHub Pages deployment, and the design decisions behind this blog.'
 pubDate: '2026-03-16'
+heroImage: '../../assets/blog-building-this-site.png'
 ---
 
 I built this site to pour my thoughts onto paper. That is why there is no comments section — this is my place.
