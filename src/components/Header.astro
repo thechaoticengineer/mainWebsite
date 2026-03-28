@@ -52,12 +52,15 @@ import HeaderLink from './HeaderLink.astro';
 		border-bottom: 1px solid var(--border);
 	}
 	nav {
+		position: relative;
 		display: flex;
 		align-items: center;
-		justify-content: space-between;
+		justify-content: center;
 		padding: 16px 48px;
 	}
 	.logo {
+		position: absolute;
+		left: 48px;
 		font-family: var(--font-mono);
 		font-size: 18px;
 		font-weight: 700;
@@ -118,6 +121,7 @@ import HeaderLink from './HeaderLink.astro';
 			padding: 14px 20px;
 		}
 		.logo {
+			left: 20px;
 			font-size: 14px;
 		}
 		.hamburger {
