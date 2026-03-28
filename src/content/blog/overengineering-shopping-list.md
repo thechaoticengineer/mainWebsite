@@ -3,6 +3,7 @@ title: 'I Overengineered a Shopping List App'
 description: "I'm too lazy to manually deploy a private project that only 2 people will ever use. Do you overengineer your private projects too?"
 pubDate: '2026-03-28'
 heroImage: '../../assets/shoppingList.png'
+tags: ['react', 'dotnet', 'devops', 'docker']
 ---
 
 I don't know, but I'm too lazy to manually deploy a private project that only 2 people will ever use — me and my wife. Do you overengineer your private projects too?

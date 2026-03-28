@@ -3,6 +3,7 @@ title: 'How I Built and Deployed This Site'
 description: 'A deep dive into the Astro framework, GitHub Pages deployment, and the design decisions behind this blog.'
 pubDate: '2026-03-16'
 heroImage: '../../assets/blog-building-this-site.png'
+tags: ['astro', 'devops', 'webdev']
 ---
 
 I built this site to pour my thoughts onto paper. That is why there is no comments section — this is my place.

@@ -197,6 +197,22 @@ const rest = posts.slice(1);
 				margin: 0;
 			}
 
+			.card-tags {
+				display: flex;
+				gap: 6px;
+				flex-wrap: wrap;
+			}
+			.card-tag {
+				font-family: var(--font-code);
+				font-size: 10px;
+				font-weight: 500;
+				color: var(--accent);
+				background: rgba(0, 255, 65, 0.08);
+				border: 1px solid rgba(0, 255, 65, 0.2);
+				padding: 2px 8px;
+				border-radius: 9999px;
+			}
+
 			.divider {
 				height: 1px;
 				background: var(--border);
@@ -262,9 +278,16 @@ const rest = posts.slice(1);
 						)}
 						<div class="featured-body">
 							<div class="badge"><span>LATEST</span></div>
-							<span class="featured-date"><FormattedDate date={featured.data.pubDate} /></span>
+							<span class="featured-date"><FormattedDate date={featured.data.pubDate} /> &middot; {Math.max(1, Math.ceil((featured.body?.split(/\s+/).length ?? 0) / 200))} min read</span>
 							<h2 class="featured-title">{featured.data.title}</h2>
 							<p class="featured-desc">{featured.data.description}</p>
+							{featured.data.tags?.length > 0 && (
+								<div class="card-tags">
+									{featured.data.tags.map((tag: string) => (
+										<span class="card-tag">{tag}</span>
+									))}
+								</div>
+							)}
 							<span class="read-more">Read more &rarr;</span>
 						</div>
 					</a>
@@ -280,9 +303,16 @@ const rest = posts.slice(1);
 									</div>
 								)}
 								<div class="card-body">
-									<span class="card-date"><FormattedDate date={post.data.pubDate} /></span>
+									<span class="card-date"><FormattedDate date={post.data.pubDate} /> &middot; {Math.max(1, Math.ceil((post.body?.split(/\s+/).length ?? 0) / 200))} min read</span>
 									<h3 class="card-title">{post.data.title}</h3>
 									<p class="card-desc">{post.data.description}</p>
+									{post.data.tags?.length > 0 && (
+										<div class="card-tags">
+											{post.data.tags.map((tag: string) => (
+												<span class="card-tag">{tag}</span>
+											))}
+										</div>
+									)}
 									<span class="read-more">Read more &rarr;</span>
 								</div>
 							</a>

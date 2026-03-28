@@ -209,6 +209,22 @@ const posts = (await getCollection('blog'))
 				margin: 0;
 			}
 
+			.card-tags {
+				display: flex;
+				gap: 6px;
+				flex-wrap: wrap;
+			}
+			.card-tag {
+				font-family: var(--font-code);
+				font-size: 10px;
+				font-weight: 500;
+				color: var(--accent);
+				background: rgba(0, 255, 65, 0.08);
+				border: 1px solid rgba(0, 255, 65, 0.2);
+				padding: 2px 8px;
+				border-radius: 9999px;
+			}
+
 			/* About Section */
 			.about-section {
 				display: flex;
@@ -337,9 +353,16 @@ const posts = (await getCollection('blog'))
 								</div>
 							)}
 							<div class="card-body">
-								<p class="card-date"><FormattedDate date={post.data.pubDate} /></p>
+								<p class="card-date"><FormattedDate date={post.data.pubDate} /> &middot; {Math.max(1, Math.ceil((post.body?.split(/\s+/).length ?? 0) / 200))} min read</p>
 								<h3 class="card-title">{post.data.title}</h3>
 								<p class="card-desc">{post.data.description}</p>
+								{post.data.tags?.length > 0 && (
+									<div class="card-tags">
+										{post.data.tags.map((tag: string) => (
+											<span class="card-tag">{tag}</span>
+										))}
+									</div>
+								)}
 							</div>
 						</a>
 					))}

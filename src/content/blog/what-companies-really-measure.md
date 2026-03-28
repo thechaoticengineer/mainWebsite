@@ -3,6 +3,7 @@ title: 'What Companies Really Measure'
 description: 'The gap between corporate values and actual metrics. Why obsessing over productivity prevents real improvement.'
 pubDate: '2026-03-10'
 heroImage: '../../assets/blog-what-companies-measure.png'
+tags: ['culture', 'leadership']
 ---
 
 If you want to understand a company,
