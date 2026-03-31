@@ -21,12 +21,15 @@
             16,
             48
           ],
-          "justifyContent": "space_between",
+          "justifyContent": "center",
           "alignItems": "center",
           "children": [
             {
               "type": "text",
               "id": "IVOiV",
+              "layoutPosition": "absolute",
+              "x": 48,
+              "y": 16,
               "name": "Logo",
               "fill": "$accent-primary",
               "content": "The Chaotic Engineer",
@@ -39,6 +42,7 @@
               "id": "JbNb4",
               "name": "Nav Links",
               "gap": 32,
+              "justifyContent": "center",
               "alignItems": "center",
               "children": [
                 {
@@ -720,12 +724,15 @@
             16,
             48
           ],
-          "justifyContent": "space_between",
+          "justifyContent": "center",
           "alignItems": "center",
           "children": [
             {
               "type": "text",
               "id": "K8xy0",
+              "layoutPosition": "absolute",
+              "x": 48,
+              "y": 16,
               "name": "logo",
               "fill": "$accent-primary",
               "content": "The Chaotic Engineer",
@@ -738,6 +745,7 @@
               "id": "MKpvH",
               "name": "links",
               "gap": 32,
+              "justifyContent": "center",
               "alignItems": "center",
               "children": [
                 {
@@ -1241,12 +1249,15 @@
             16,
             48
           ],
-          "justifyContent": "space_between",
+          "justifyContent": "center",
           "alignItems": "center",
           "children": [
             {
               "type": "text",
               "id": "Hj1Ji",
+              "layoutPosition": "absolute",
+              "x": 48,
+              "y": 16,
               "name": "logo",
               "fill": "$accent-primary",
               "content": "The Chaotic Engineer",
@@ -1259,6 +1270,7 @@
               "id": "qDxhO",
               "name": "links",
               "gap": 32,
+              "justifyContent": "center",
               "alignItems": "center",
               "children": [
                 {
@@ -1623,12 +1635,15 @@
             16,
             48
           ],
-          "justifyContent": "space_between",
+          "justifyContent": "center",
           "alignItems": "center",
           "children": [
             {
               "type": "text",
               "id": "wWrvm",
+              "layoutPosition": "absolute",
+              "x": 48,
+              "y": 16,
               "name": "logo",
               "fill": "$accent-primary",
               "content": "The Chaotic Engineer",
@@ -1641,6 +1656,7 @@
               "id": "WsFNH",
               "name": "links",
               "gap": 32,
+              "justifyContent": "center",
               "alignItems": "center",
               "children": [
                 {
