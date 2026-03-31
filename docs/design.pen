@@ -4108,6 +4108,263 @@
       "fontFamily": "Inter",
       "fontSize": 12,
       "fontWeight": "normal"
+    },
+    {
+      "type": "frame",
+      "id": "ynxzs",
+      "x": 0,
+      "y": 4362,
+      "name": "Blog Hero - AI Spiral",
+      "clip": true,
+      "width": 1200,
+      "height": 630,
+      "fill": {
+        "type": "gradient",
+        "gradientType": "linear",
+        "enabled": true,
+        "rotation": 160,
+        "size": {
+          "height": 1
+        },
+        "colors": [
+          {
+            "color": "#0A0A0AFF",
+            "position": 0
+          },
+          {
+            "color": "#0D1117FF",
+            "position": 0.5
+          },
+          {
+            "color": "#0A0A1AFF",
+            "position": 1
+          }
+        ]
+      },
+      "layout": "none",
+      "children": [
+        {
+          "type": "frame",
+          "id": "ASDjI",
+          "x": 0,
+          "y": 0,
+          "name": "Grid Overlay",
+          "width": 1200,
+          "height": 630,
+          "fill": {
+            "type": "image",
+            "enabled": true,
+            "url": "./images/generated-1774970600439.png",
+            "mode": "fill"
+          },
+          "layout": "none"
+        },
+        {
+          "type": "ellipse",
+          "id": "8h5H7",
+          "x": 600,
+          "y": 65,
+          "name": "Spiral Ring 1",
+          "fill": "#00000000",
+          "width": 500,
+          "height": 500,
+          "stroke": {
+            "align": "center",
+            "thickness": 1,
+            "fill": "#A855F720"
+          }
+        },
+        {
+          "type": "ellipse",
+          "id": "Lcpxs",
+          "x": 660,
+          "y": 125,
+          "name": "Spiral Ring 2",
+          "fill": "#00000000",
+          "width": 380,
+          "height": 380,
+          "stroke": {
+            "align": "center",
+            "thickness": 1,
+            "fill": "#06B6D430"
+          }
+        },
+        {
+          "type": "ellipse",
+          "id": "qv4Ef",
+          "x": 720,
+          "y": 185,
+          "name": "Spiral Ring 3",
+          "fill": "#00000000",
+          "width": 260,
+          "height": 260,
+          "stroke": {
+            "align": "center",
+            "thickness": 1,
+            "fill": "#A855F740"
+          }
+        },
+        {
+          "type": "ellipse",
+          "id": "UtofC",
+          "x": 780,
+          "y": 245,
+          "name": "Spiral Ring 4",
+          "fill": "#00000000",
+          "width": 140,
+          "height": 140,
+          "stroke": {
+            "align": "center",
+            "thickness": 1,
+            "fill": "#EC489960"
+          }
+        },
+        {
+          "type": "ellipse",
+          "id": "PhGot",
+          "x": 820,
+          "y": 285,
+          "name": "Spiral Ring 5",
+          "fill": "#A855F715",
+          "width": 60,
+          "height": 60,
+          "stroke": {
+            "align": "center",
+            "thickness": 2,
+            "fill": "#A855F7FF"
+          }
+        },
+        {
+          "type": "line",
+          "id": "0t8i2",
+          "x": 50,
+          "y": 200,
+          "name": "Accent Line 1",
+          "width": 400,
+          "height": 0,
+          "stroke": {
+            "align": "center",
+            "thickness": 1,
+            "fill": "#A855F730"
+          }
+        },
+        {
+          "type": "line",
+          "id": "8Hk87",
+          "x": 80,
+          "y": 350,
+          "name": "Accent Line 2",
+          "width": 300,
+          "height": 0,
+          "stroke": {
+            "align": "center",
+            "thickness": 1,
+            "fill": "#06B6D425"
+          }
+        },
+        {
+          "type": "line",
+          "id": "LcGRa",
+          "x": 30,
+          "y": 480,
+          "name": "Accent Line 3",
+          "width": 250,
+          "height": 0,
+          "stroke": {
+            "align": "center",
+            "thickness": 1,
+            "fill": "#EC489920"
+          }
+        },
+        {
+          "type": "ellipse",
+          "id": "GLyYW",
+          "x": 650,
+          "y": 115,
+          "name": "Glow Purple",
+          "fill": {
+            "type": "gradient",
+            "gradientType": "radial",
+            "enabled": true,
+            "rotation": 0,
+            "size": {
+              "width": 1,
+              "height": 1
+            },
+            "colors": [
+              {
+                "color": "#A855F718",
+                "position": 0
+              },
+              {
+                "color": "#A855F700",
+                "position": 1
+              }
+            ]
+          },
+          "width": 400,
+          "height": 400
+        },
+        {
+          "type": "ellipse",
+          "id": "qPAiU",
+          "x": 100,
+          "y": 250,
+          "name": "Glow Cyan",
+          "fill": {
+            "type": "gradient",
+            "gradientType": "radial",
+            "enabled": true,
+            "rotation": 0,
+            "size": {
+              "width": 1,
+              "height": 1
+            },
+            "colors": [
+              {
+                "color": "#06B6D410",
+                "position": 0
+              },
+              {
+                "color": "#06B6D400",
+                "position": 1
+              }
+            ]
+          },
+          "width": 300,
+          "height": 300
+        },
+        {
+          "type": "ellipse",
+          "id": "197Zo",
+          "x": 846,
+          "y": 311,
+          "name": "Node Dot 1",
+          "fill": "#A855F7FF",
+          "width": 8,
+          "height": 8
+        },
+        {
+          "type": "ellipse",
+          "id": "JsF2i",
+          "x": 597,
+          "y": 312,
+          "name": "Node Dot 2",
+          "fill": "#06B6D4CC",
+          "width": 6,
+          "height": 6
+        },
+        {
+          "type": "ellipse",
+          "id": "f9v2k",
+          "x": 847,
+          "y": 62,
+          "name": "Node Dot 3",
+          "fill": "#EC4899AA",
+          "width": 6,
+          "height": 6
+        }
+      ]
     }
   ],
   "variables": {
