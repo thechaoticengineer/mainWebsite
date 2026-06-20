@@ -40,12 +40,6 @@ const posts = (await getCollection('blog'))
 				border: none;
 				border-radius: 0;
 			}
-			.hero-overlay {
-				position: absolute;
-				inset: 0;
-				background: rgba(10, 10, 15, 0.88);
-				z-index: 1;
-			}
 			.hero-content {
 				position: relative;
 				z-index: 2;
@@ -344,7 +338,6 @@ const posts = (await getCollection('blog'))
 				<div class="hero-bg">
 					<Image src={HeroBg} alt="" width={1440} height={700} />
 				</div>
-				<div class="hero-overlay"></div>
 				<div class="hero-content">
 					<h1 class="hero-title">The Chaotic Engineer</h1>
 					<p class="hero-subtitle" data-text="Exploring the beautiful chaos of software engineering, one line of code at a time."></p>
