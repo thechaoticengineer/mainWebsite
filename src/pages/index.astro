@@ -17,7 +17,6 @@ const posts = (await getCollection('blog')).sort((a, b) => b.data.pubDate.valueO
 		<main id="main-content" class="container">
 			<section class="hero" aria-labelledby="hero-title">
 				<div class="hero-copy">
-					<p class="eyebrow">Software / People / Things that break</p>
 					<h1 id="hero-title" aria-label={SITE_TITLE}>
 						<span class="title-small">The <span class="motion-art title-cursor" aria-hidden="true"></span></span>
 						{['Chaotic', 'Engineer'].map(word => (
@@ -46,7 +45,6 @@ const posts = (await getCollection('blog')).sort((a, b) => b.data.pubDate.valueO
 <style>
 	.hero { display: grid; grid-template-columns: minmax(0, 1.65fr) minmax(0, 1fr); align-items: center; gap: 20px; padding-block: 54px 24px; }
 	.hero-copy { min-width: 0; }
-	.hero .eyebrow { margin-bottom: 24px; font-size: .8rem; letter-spacing: .075em; }
 	h1 { font-family: var(--font-pixel); font-weight: 400; text-transform: uppercase; color: var(--accent); font-size: clamp(2rem, 4.85vw, 4.25rem); line-height: 1.42; letter-spacing: -.055em; margin: 0 0 20px; }
 	h1 > span { display: block; }
 	h1 .title-small { display: flex; align-items: center; gap: .4em; font-size: .53em; line-height: 1.6; }
@@ -74,13 +72,11 @@ const posts = (await getCollection('blog')).sort((a, b) => b.data.pubDate.valueO
 	@media (max-width: 900px) {
 		.hero { grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); }
 		h1 { font-size: 4.6vw; }
-		.hero .eyebrow { font-size: .65rem; }
 		.desktop-break { display: none; }
 	}
 	@media (max-width: 640px) {
 		.hero { grid-template-columns: 1fr; gap: 12px; padding-block: 36px 30px; }
 		h1 { font-size: clamp(1.8rem, 7.8vw, 3rem); margin-bottom: 22px; }
-		.hero .eyebrow { font-size: .6rem; letter-spacing: .02em; margin-bottom: 20px; }
 		.hero-description { max-width: 36ch; }
 	}
 </style>
