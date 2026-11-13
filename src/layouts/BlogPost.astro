@@ -17,313 +17,42 @@ const { title, description, pubDate, updatedDate, heroImage, tags, readingTime, 
 const tocHeadings = (headings ?? []).filter((h) => h.depth === 2 || h.depth === 3);
 ---
 
+<!doctype html>
 <html lang="en">
 	<head>
-		<BaseHead title={title} description={description} />
+		<BaseHead title={title} description={description} image={heroImage} />
 		<style>
-			/* Hero Image */
-			.hero-image {
-				position: relative;
-				width: 100%;
-				height: 400px;
-				overflow: hidden;
-			}
-			.hero-image img {
-				width: 100%;
-				height: 100%;
-				object-fit: cover;
-				border: none;
-				border-radius: 0;
-			}
-			.hero-gradient {
-				position: absolute;
-				inset: 0;
-				background: linear-gradient(to bottom, transparent 0%, var(--surface) 100%);
-			}
-
-			/* Article */
-			.article-content {
-				display: flex;
-				flex-direction: column;
-				gap: 24px;
-				padding: 48px 360px;
-			}
-
-			/* Meta */
-			.meta {
-				display: flex;
-				align-items: center;
-				gap: 16px;
-				flex-wrap: wrap;
-			}
-			.meta-date {
-				font-family: var(--font-code);
-				font-size: 13px;
-				color: var(--accent-dark);
-			}
-			.meta-dot {
-				font-size: 13px;
-				color: var(--fg-muted);
-			}
-			.meta-read {
-				font-family: var(--font-code);
-				font-size: 13px;
-				color: var(--fg-muted);
-			}
-			.last-updated {
-				font-family: var(--font-code);
-				font-size: 12px;
-				color: var(--fg-muted);
-				font-style: italic;
-			}
-
-			/* Tags */
-			.tags {
-				display: flex;
-				gap: 8px;
-				flex-wrap: wrap;
-			}
-			.tag {
-				font-family: var(--font-code);
-				font-size: 11px;
-				font-weight: 500;
-				color: var(--accent);
-				background: rgba(0, 255, 65, 0.08);
-				border: 1px solid rgba(0, 255, 65, 0.2);
-				padding: 3px 10px;
-				border-radius: 9999px;
-				text-decoration: none;
-				transition: all 0.2s ease;
-			}
-			.tag:hover {
-				background: rgba(0, 255, 65, 0.15);
-				text-shadow: none;
-			}
-
-			/* Title */
-			.article-title {
-				font-family: var(--font-mono);
-				font-size: 42px;
-				font-weight: 700;
-				color: var(--fg);
-				line-height: 1.2;
-				text-shadow: none;
-				margin: 0;
-			}
-
-			.article-divider {
-				height: 1px;
-				background: var(--border);
-			}
-
-			/* Table of Contents */
-			.toc {
-				background: var(--surface-card);
-				border: 1px solid var(--border);
-				border-radius: 8px;
-				padding: 20px 24px;
-			}
-			.toc-title {
-				font-family: var(--font-mono);
-				font-size: 14px;
-				font-weight: 600;
-				color: var(--accent);
-				text-shadow: none;
-				margin: 0 0 12px;
-				letter-spacing: 1px;
-			}
-			.toc-list {
-				list-style: none;
-				padding: 0;
-				margin: 0;
-				display: flex;
-				flex-direction: column;
-				gap: 6px;
-			}
-			.toc-list a {
-				font-family: var(--font-sans);
-				font-size: 14px;
-				color: var(--fg-muted);
-				text-decoration: none;
-				transition: color 0.2s ease;
-			}
-			.toc-list a:hover {
-				color: var(--accent);
-				text-shadow: none;
-			}
-			.toc-h3 {
-				padding-left: 16px;
-			}
-
-			/* Prose */
-			.prose {
-				font-family: var(--font-sans);
-				font-size: 17px;
-				color: var(--fg);
-				line-height: 1.8;
-			}
-			.prose h2 {
-				font-family: var(--font-mono);
-				font-size: 28px;
-				font-weight: 700;
-				color: var(--accent);
-				text-shadow: none;
-				margin: 1.5em 0 0.5em;
-			}
-			.prose h3 {
-				font-family: var(--font-mono);
-				font-size: 22px;
-				font-weight: 700;
-				color: var(--accent);
-				text-shadow: none;
-				margin: 1.2em 0 0.5em;
-			}
-			.prose p {
-				margin-bottom: 1.5em;
-			}
-			.prose ul, .prose ol {
-				margin-bottom: 1.5em;
-				padding-left: 1.5em;
-			}
-			.prose li {
-				margin-bottom: 0.5em;
-			}
-
-			/* Code block wrapper for copy button */
-			.prose pre {
-				position: relative;
-			}
-
-			/* Related Posts */
-			.related-section {
-				display: flex;
-				flex-direction: column;
-				gap: 20px;
-			}
-			.related-title {
-				font-family: var(--font-mono);
-				font-size: 18px;
-				font-weight: 600;
-				color: var(--accent);
-				text-shadow: none;
-				margin: 0;
-			}
-			.related-grid {
-				display: flex;
-				gap: 20px;
-			}
-			.related-card {
-				flex: 1;
-				display: flex;
-				flex-direction: column;
-				gap: 8px;
-				padding: 16px;
-				background: var(--surface-card);
-				border: 1px solid var(--border);
-				border-radius: 8px;
-				text-decoration: none;
-				transition: all 0.2s ease;
-			}
-			.related-card:hover {
-				border-color: rgba(0, 255, 65, 0.3);
-				box-shadow: 0 4px 16px rgba(0, 255, 65, 0.1);
-				transform: translateY(-2px);
-				text-shadow: none;
-			}
-			.related-card-date {
-				font-family: var(--font-code);
-				font-size: 11px;
-				color: var(--accent-dark);
-			}
-			.related-card-title {
-				font-family: var(--font-mono);
-				font-size: 15px;
-				font-weight: 600;
-				color: var(--fg);
-				line-height: 1.3;
-				margin: 0;
-				text-shadow: none;
-			}
-			.related-card-tags {
-				display: flex;
-				gap: 6px;
-				flex-wrap: wrap;
-			}
-			.related-tag {
-				font-family: var(--font-code);
-				font-size: 10px;
-				color: var(--accent);
-				background: rgba(0, 255, 65, 0.08);
-				padding: 2px 8px;
-				border-radius: 9999px;
-			}
-
-			/* Back Link */
-			.back-link {
-				font-family: var(--font-sans);
-				font-size: 14px;
-				font-weight: 600;
-				color: var(--accent);
-			}
-
-			.bottom-divider {
-				height: 1px;
-				background: var(--border);
-			}
-
-			/* Copy button */
-			.copy-btn {
-				position: absolute;
-				top: 8px;
-				right: 8px;
-				padding: 4px 10px;
-				background: rgba(0, 255, 65, 0.1);
-				border: 1px solid rgba(0, 255, 65, 0.2);
-				border-radius: 4px;
-				color: var(--accent);
-				font-family: var(--font-code);
-				font-size: 11px;
-				cursor: pointer;
-				opacity: 0;
-				transition: opacity 0.2s ease, background 0.2s ease;
-			}
-			pre:hover .copy-btn {
-				opacity: 1;
-			}
-			.copy-btn:hover {
-				background: rgba(0, 255, 65, 0.2);
-			}
-			.copy-btn.copied {
-				opacity: 1;
-			}
-
-			@media (max-width: 720px) {
-				.hero-image {
-					height: 220px;
-				}
-				.article-content {
-					padding: 24px 20px;
-					gap: 20px;
-				}
-				.meta {
-					gap: 8px;
-				}
-				.article-title {
-					font-size: 26px;
-				}
-				.prose {
-					font-size: 15px;
-					line-height: 1.7;
-				}
-				.prose h2 {
-					font-size: 22px;
-				}
-				.prose h3 {
-					font-size: 18px;
-				}
-				.related-grid {
-					flex-direction: column;
-				}
+			.hero-image { width: min(var(--content-width), calc(100% - 80px)); margin: 40px auto 0; border: 1px solid var(--border); }
+			.hero-image img { width: 100%; height: clamp(180px, 25vw, 360px); object-fit: cover; }
+			.article-content { width: min(760px, calc(100% - 80px)); margin-inline: auto; padding-top: 48px; display: flex; flex-direction: column; gap: 24px; }
+			.meta { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; font-size: .75rem; color: var(--fg-muted); }
+			.meta-date { color: var(--accent); }
+			.last-updated { font-size: .7rem; }
+			.article-title { font-size: clamp(1.6rem, 3.4vw, 2.65rem); line-height: 1.35; margin: 0; }
+			.tags, .related-card-tags { display: flex; flex-wrap: wrap; gap: 8px 18px; }
+			.tag, .related-tag { color: var(--accent); font-size: .7rem; }
+			.tag::before, .related-tag::before { content: '#'; color: var(--fg-muted); }
+			.article-divider { height: 1px; background: var(--border); }
+			.toc { padding: 20px 24px; background: var(--surface-card); border-left: 2px solid var(--accent); }
+			.toc-title { font-size: .75rem; letter-spacing: .08em; color: var(--accent); margin: 0 0 14px; }
+			.toc-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; }
+			.toc-list a { font-size: .85rem; text-decoration: none; }
+			.toc-h3 { padding-left: 16px; }
+			.related-title { font-size: 1rem; margin-bottom: 20px; }
+			.related-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+			.related-card { display: flex; flex-direction: column; gap: 10px; border-top: 1px solid var(--border); padding: 18px 0; text-decoration: none; }
+			.related-card:hover { border-color: var(--accent); }
+			.related-card-date { font-size: .7rem; color: var(--fg-muted); }
+			.related-card-title { font-size: 1rem; line-height: 1.5; margin: 0; }
+			.back-link { font-size: .85rem; align-self: flex-start; }
+			.prose :global(pre) { position: relative; }
+			.prose :global(.copy-btn) { position: absolute; top: 8px; right: 8px; padding: 4px 12px; background: var(--surface-card); border: 1px solid var(--border); color: var(--accent); font-family: var(--font-code); font-size: .75rem; cursor: pointer; }
+			.prose :global(.copy-btn:hover) { border-color: var(--accent); }
+			@media (max-width: 640px) {
+				.hero-image { width: calc(100% - 40px); margin-top: 24px; }
+				.article-content { width: calc(100% - 40px); padding-top: 28px; gap: 20px; }
+				.related-grid { grid-template-columns: 1fr; gap: 0; }
+				.toc { padding: 16px; }
 			}
 		</style>
 	</head>
@@ -335,7 +64,6 @@ const tocHeadings = (headings ?? []).filter((h) => h.depth === 2 || h.depth === 
 				{heroImage && (
 					<div class="hero-image">
 						<Image width={1440} height={400} src={heroImage} alt="" />
-						<div class="hero-gradient"></div>
 					</div>
 				)}
 				<div class="article-content">
@@ -363,7 +91,7 @@ const tocHeadings = (headings ?? []).filter((h) => h.depth === 2 || h.depth === 
 					)}
 					<div class="article-divider"></div>
 					{tocHeadings.length > 2 && (
-						<nav class="toc">
+						<nav class="toc" aria-label="Table of contents">
 							<p class="toc-title">TABLE OF CONTENTS</p>
 							<ul class="toc-list">
 								{tocHeadings.map((h) => (
@@ -402,7 +130,6 @@ const tocHeadings = (headings ?? []).filter((h) => h.depth === 2 || h.depth === 
 					<a href="/blog" class="back-link">&larr; Back to all posts</a>
 				</div>
 			</article>
-			<div class="bottom-divider"></div>
 		</main>
 		<Footer />
 
@@ -411,10 +138,19 @@ const tocHeadings = (headings ?? []).filter((h) => h.depth === 2 || h.depth === 
 				const btn = document.createElement('button');
 				btn.className = 'copy-btn';
 				btn.textContent = 'Copy';
+				btn.type = 'button';
+				btn.setAttribute('aria-label', 'Copy code to clipboard');
+				btn.setAttribute('aria-live', 'polite');
 				btn.addEventListener('click', async () => {
 					const code = pre.querySelector('code');
 					if (code) {
-						await navigator.clipboard.writeText(code.textContent ?? '');
+						try {
+							await navigator.clipboard.writeText(code.textContent ?? '');
+						} catch {
+							btn.textContent = 'Copy failed';
+							setTimeout(() => { btn.textContent = 'Copy'; }, 2000);
+							return;
+						}
 						btn.textContent = 'Copied!';
 						btn.classList.add('copied');
 						setTimeout(() => {

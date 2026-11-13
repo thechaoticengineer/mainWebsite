@@ -23,7 +23,7 @@ Shared repository instructions. All coding tools working in this repository shou
 
 ## Project Overview
 
-Personal blog/website for "The Chaotic Engineer" (thechaotic.engineer), built with Astro 7. The site has a cyberpunk/neon-green-on-dark theme with CRT scanline effects and glitch animations.
+Personal blog/website for "The Chaotic Engineer" (thechaotic.engineer), built with Astro 7. The site has an Omarchy-inspired pixel theme: charcoal surfaces, muted olive accents, bitmap display headings, and a small machine illustration. Keep body text readable; avoid neon glows and CRT overlays.
 
 ## Commands
 
@@ -41,10 +41,10 @@ Deploys automatically to GitHub Pages via `.github/workflows/deploy.yml` on push
 - **Content collections** defined in `src/content.config.ts` — blog posts live in `src/content/blog/` as Markdown/MDX files
 - Blog post frontmatter schema: `title`, `description`, `pubDate` (required), `updatedDate`, `heroImage`, `tags` (optional)
 - **Layouts**: `BlogPost.astro` is the only layout, wrapping blog post content
-- **Components**: `BaseHead.astro` (meta/SEO), `Header.astro` (sticky nav with mobile hamburger menu), `Footer.astro`, `HeaderLink.astro`, `FormattedDate.astro`
+- **Components**: `BaseHead.astro` (meta/SEO), `Header.astro` (responsive, always-visible navigation and skip link), `Footer.astro` (pixel cable divider), `HeaderLink.astro`, `FormattedDate.astro`, `PostList.astro` (shared post rows), `PixelIcon.astro`, `PixelMachine.astro`
 - **Pages**: `index.astro` (homepage), `about.astro`, `blog/index.astro` (listing), `blog/[...slug].astro` (individual posts), `rss.xml.js`
 - **Global constants** (`SITE_TITLE`, `SITE_DESCRIPTION`) in `src/consts.ts`
-- **Styling**: Single global stylesheet `src/styles/global.css` with CSS custom properties for the cyberpunk theme. No CSS framework. Fonts: Geist Sans, Geist Mono, and IBM Plex Mono (imported from `@fontsource` packages)
+- **Styling**: Shared tokens, typography, prose, focus, and reduced-motion rules in `src/styles/global.css`; component-specific styles stay scoped in Astro components. No CSS framework. Fonts: Press Start 2P for display headings, IBM Plex Mono for UI, Geist Sans for long-form reading (local `@fontsource` imports).
 
 ## Key Conventions
 
@@ -60,14 +60,14 @@ Deploys automatically to GitHub Pages via `.github/workflows/deploy.yml` on push
 - [ ] `/projects` page — portfolio of personal projects (e.g. shopping list app, this blog) with links to repo/demo
 - [ ] Client-side search with Pagefind (integrates well with Astro static builds)
 - [ ] Newsletter / email subscription — e.g. Buttondown (free tier), form in footer or dedicated page
-- [x] Typing effect animation on hero section — fits the cyberpunk/terminal aesthetic
+- [x] Subtle hero machine signal animation, with reduced-motion support (replaces the previous typing effect)
 - [ ] Astro View Transitions — built-in page transitions, could do a glitch effect between pages
 
 ### Ambitious
 - [ ] `/uses` page — gear, tools, IDE, terminal setup (popular format for dev blogs)
 - [ ] Comments via Giscus (GitHub Discussions-based, zero backend)
 - [ ] Interactive demos — embedded React components in MDX (e.g. shopping list app snippet)
-- [ ] Dark/light theme toggle — keep retro green as default, add a clean light variant
+- [ ] Dark/light theme toggle — keep the charcoal/olive theme as default, add a clean light variant
 - [ ] `/now` page — "what I'm doing now" (nownownow.com format)
 - [ ] Post series mechanism — link posts into series with prev/next navigation
 - [ ] Privacy-friendly analytics — Plausible or Umami (self-hosted)
