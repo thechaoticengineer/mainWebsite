@@ -1,0 +1,19 @@
+<button class="motion-toggle" type="button" aria-label="Pause animations" title="Pause animations" hidden>
+	<svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" shape-rendering="crispEdges" aria-hidden="true">
+		<path class="pause-icon" d="M3 2h4v12H3zM10 2h4v12h-4z" />
+		<path class="play-icon" d="M3 1h3v2h3v2h3v2h3v2h-3v2H9v2H6v2H3z" />
+	</svg>
+</button>
+<script>
+	import { setupMotion } from '../scripts/motion';
+	const button = document.querySelector<HTMLButtonElement>('.motion-toggle');
+	if (button) setupMotion(button);
+</script>
+<style>
+	.motion-toggle { display: inline-grid; place-items: center; width: 36px; height: 40px; padding: 0; border: 1px solid var(--border); color: var(--fg-muted); background: transparent; cursor: pointer; flex-shrink: 0; }
+	.motion-toggle[hidden] { display: none; }
+	.motion-toggle:hover { color: var(--accent); border-color: var(--accent); }
+	.play-icon { display: none; }
+	[data-state='paused'] .play-icon { display: block; }
+	[data-state='paused'] .pause-icon { display: none; }
+</style>

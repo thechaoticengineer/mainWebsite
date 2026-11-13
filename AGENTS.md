@@ -17,7 +17,7 @@ Shared repository instructions. All coding tools working in this repository shou
 
 ## Verification
 
-- Run `npm run build` for application changes. There is currently no test framework or linter.
+- Run `npm run build` for application changes and `npm test` for animation-control changes. Tests use the built-in Node.js test runner; no linter is configured.
 - For visual changes, inspect desktop and mobile layouts and check navigation, readability, keyboard focus, and reduced-motion behavior where applicable.
 - For documentation-only changes, review the diff and run `git diff --check`; a production build is unnecessary.
 
@@ -28,6 +28,7 @@ Personal blog/website for "The Chaotic Engineer" (thechaotic.engineer), built wi
 ## Commands
 
 - `npm run dev` — local dev server at localhost:4321
+- `npm test` — animation-control regression tests
 - `npm run build` — production build to `./dist/`
 - `npm run preview` — preview the production build locally
 
@@ -41,7 +42,7 @@ Deploys automatically to GitHub Pages via `.github/workflows/deploy.yml` on push
 - **Content collections** defined in `src/content.config.ts` — blog posts live in `src/content/blog/` as Markdown/MDX files
 - Blog post frontmatter schema: `title`, `description`, `pubDate` (required), `updatedDate`, `heroImage`, `tags` (optional)
 - **Layouts**: `BlogPost.astro` is the only layout, wrapping blog post content
-- **Components**: `BaseHead.astro` (meta/SEO), `Header.astro` (responsive, always-visible navigation and skip link), `Footer.astro` (pixel cable divider), `HeaderLink.astro`, `FormattedDate.astro`, `PostList.astro` (shared post rows), `PixelIcon.astro`, `PixelMachine.astro`
+- **Components**: `BaseHead.astro` (meta/SEO), `Header.astro` (responsive, always-visible navigation and skip link), `Footer.astro` (pixel cable divider), `HeaderLink.astro`, `FormattedDate.astro`, `PostList.astro` (shared post rows), `PixelIcon.astro`, `PixelMachine.astro`, `CableDivider.astro`, `MotionToggle.astro`
 - **Pages**: `index.astro` (homepage), `about.astro`, `blog/index.astro` (listing), `blog/[...slug].astro` (individual posts), `rss.xml.js`
 - **Global constants** (`SITE_TITLE`, `SITE_DESCRIPTION`) in `src/consts.ts`
 - **Styling**: Shared tokens, typography, prose, focus, and reduced-motion rules in `src/styles/global.css`; component-specific styles stay scoped in Astro components. No CSS framework. Fonts: Press Start 2P for display headings, IBM Plex Mono for UI, Geist Sans for long-form reading (local `@fontsource` imports).
@@ -51,7 +52,7 @@ Deploys automatically to GitHub Pages via `.github/workflows/deploy.yml` on push
 - Site URL configured as `https://thechaotic.engineer` in `astro.config.mjs`
 - Custom domain set via `public/CNAME`
 - TypeScript strict mode with `strictNullChecks`
-- No test framework configured
+- Built-in Node.js test runner (`tests/motion.test.mjs`)
 - No linter configured
 
 ## TODO
@@ -60,7 +61,7 @@ Deploys automatically to GitHub Pages via `.github/workflows/deploy.yml` on push
 - [ ] `/projects` page — portfolio of personal projects (e.g. shopping list app, this blog) with links to repo/demo
 - [ ] Client-side search with Pagefind (integrates well with Astro static builds)
 - [ ] Newsletter / email subscription — e.g. Buttondown (free tier), form in footer or dedicated page
-- [x] Subtle hero machine signal animation, with reduced-motion support (replaces the previous typing effect)
+- [x] Animated hero machine and pixel cable separators, with persistent pause control and reduced-motion support
 - [ ] Astro View Transitions — built-in page transitions, could do a glitch effect between pages
 
 ### Ambitious

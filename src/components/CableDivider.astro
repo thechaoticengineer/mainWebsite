@@ -1,0 +1,36 @@
+---
+interface Props { reverse?: boolean; }
+const { reverse = false } = Astro.props;
+---
+<div class:list={['cable-divider', { reverse }]} aria-hidden="true">
+	<svg viewBox="0 0 1200 64" preserveAspectRatio="none" fill="none">
+		<path class="cable-shadow" d="M0 57H8V41H16V25H32V17H1160V9H1176V1H1200" />
+		<path class="cable-wire" d="M0 54H8V38H16V22H32V14H1160V6H1176V0H1200" />
+		<path class="cable-return" d="M0 62H16V46H24V30H1176V22H1184V14H1200" />
+		<path class="motion-art cable-pulse" pathLength="1000" d="M0 54H8V38H16V22H32V14H1160V6H1176V0H1200" />
+		<path class="motion-art cable-pulse second" pathLength="1000" d="M0 54H8V38H16V22H32V14H1160V6H1176V0H1200" />
+	</svg>
+	<span class="connector"><i></i><i></i><i></i></span>
+	<span class="coupler coupler-one"></span>
+	<span class="coupler coupler-two"></span>
+</div>
+<style>
+	.cable-divider { position: relative; height: 64px; width: 100%; }
+	svg { display: block; width: 100%; height: 64px; overflow: hidden; }
+	path { vector-effect: non-scaling-stroke; stroke-linejoin: miter; }
+	.cable-shadow { stroke: #59643e; stroke-width: 6px; }
+	.cable-wire { stroke: var(--accent); stroke-width: 4px; }
+	.cable-return { stroke: var(--fg); stroke-width: 2px; }
+	.cable-pulse { stroke: #f0edcf; stroke-width: 4px; stroke-dasharray: 12 988; animation: transmit 7s linear infinite; }
+	.second { animation-delay: -3.5s; }
+	.reverse svg { transform: scaleX(-1); }
+	.reverse .cable-pulse { animation-direction: reverse; }
+	.connector { position: absolute; top: 3px; left: 8%; height: 22px; padding: 5px; display: flex; gap: 4px; background: var(--fg); border: 2px solid var(--surface); box-shadow: 0 3px 0 #767766; }
+	.connector i { display: block; width: 6px; height: 8px; background: #d5a454; border: 2px solid var(--surface); }
+	.coupler { position: absolute; top: 5px; width: 10px; height: 18px; background: var(--fg); border: 2px solid var(--surface); box-shadow: 2px 2px 0 #767766; }
+	.coupler::after { content: ''; display: block; width: 2px; height: 10px; margin-inline: auto; background: var(--surface); }
+	.coupler-one { left: 28%; }
+	.coupler-two { right: 18%; }
+	@keyframes transmit { to { stroke-dashoffset: -1000; } }
+	@media (max-width: 640px) { .coupler-one { left: 42%; } }
+</style>

@@ -75,6 +75,8 @@ hr { border: 0; border-top: 1px solid var(--border); margin-block: 2rem; }
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
 .skip-link { position: absolute; z-index: 10; left: 20px; top: -100px; padding: 12px 20px; background: var(--accent); color: var(--surface); }
 .skip-link:focus { top: 12px; color: var(--surface); }
+/* Decorative motion starts only when its pause control is available. */
+html:not([data-motion='running']) .motion-art { animation-play-state: paused; }
 @media (max-width: 640px) {
 	body { font-size: 15px; }
 	.container { width: calc(100% - 40px); }

@@ -5,6 +5,7 @@ import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import PixelMachine from '../components/PixelMachine.astro';
 import PostList from '../components/PostList.astro';
+import CableDivider from '../components/CableDivider.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 const posts = (await getCollection('blog')).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()).slice(0, 3);
 ---
@@ -23,6 +24,7 @@ const posts = (await getCollection('blog')).sort((a, b) => b.data.pubDate.valueO
 				</div>
 				<PixelMachine />
 			</section>
+			<CableDivider />
 			<section aria-labelledby="recent-title">
 				<div class="section-heading"><h2 id="recent-title" class="eyebrow">Recent writing</h2><span>{String(posts.length).padStart(2, '0')} entries</span></div>
 				<PostList posts={posts} />
@@ -33,18 +35,18 @@ const posts = (await getCollection('blog')).sort((a, b) => b.data.pubDate.valueO
 	</body>
 </html>
 <style>
-	.hero { display: grid; grid-template-columns: minmax(0, 1.65fr) minmax(0, 1fr); align-items: center; gap: 20px; padding-block: 54px 62px; }
+	.hero { display: grid; grid-template-columns: minmax(0, 1.65fr) minmax(0, 1fr); align-items: center; gap: 20px; padding-block: 54px 24px; }
 	.hero-copy { min-width: 0; }
 	.hero .eyebrow { margin-bottom: 24px; font-size: .8rem; letter-spacing: .075em; }
 	h1 { font-family: var(--font-pixel); font-weight: 400; text-transform: uppercase; color: var(--accent); font-size: clamp(2rem, 4.85vw, 4.25rem); line-height: 1.42; letter-spacing: -.055em; margin: 0 0 20px; }
 	h1 span { display: block; }
 	h1 .title-small { font-size: .53em; line-height: 1.6; }
 	.hero-description { font-size: clamp(.95rem, 1.35vw, 1.15rem); margin-bottom: 18px; }
-	.section-heading { border-top: 1px solid var(--fg-muted); padding-top: 18px; margin-bottom: 10px; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+	.section-heading { padding-top: 12px; margin-bottom: 10px; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
 	.section-heading h2 { margin: 0; font-weight: 400; }
 	.section-heading > span { font-size: .75rem; color: var(--fg-muted); }
 	.all-posts { display: inline-block; margin-top: 20px; font-size: .85rem; }
-	@media (min-width: 1400px) { .hero { padding-block: 62px 72px; } }
+	@media (min-width: 1400px) { .hero { padding-block: 62px 32px; } }
 	@media (max-width: 900px) {
 		.hero { grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); }
 		h1 { font-size: 4.6vw; }
