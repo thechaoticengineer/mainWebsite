@@ -26,7 +26,7 @@ Pushes to `main` auto-deploy to GitHub Pages via GitHub Actions.
 - Shared palette, type, focus, and reduced-motion rules: `src/styles/global.css`.
 - Homepage machine: `src/assets/pixel-machine.png`, rendered responsively by `PixelMachine.astro` with alpha transparency and no caption.
 - Approved visual reference: [pixel-concept.png](docs/pixel-concept.png). Asset brief: [pixel-machine.prompt.txt](docs/pixel-machine.prompt.txt).
-- Navigation stays visible on mobile. The header pause button controls the machine, satellite modules, and signal pulses along the pixel cable dividers. The choice persists across pages when local storage is available. Motion pauses in background tabs and respects reduced-motion preferences; without JavaScript the artwork stays still.
+- Navigation stays visible on mobile. The header pause button controls the title's pixel shifts and cursor, the machine, satellite modules, and signal pulses along the pixel cable dividers. The choice persists across pages when local storage is available. Motion pauses in background tabs and respects reduced-motion preferences; without JavaScript the artwork stays still. The title's base text stays readable, and its decorative copies are hidden from assistive technology.
 - Existing posts, dates, URLs, RSS, biography, and article illustrations are retained.
 
 Validation: five animation-control tests (pause/resume, persistence, reduced motion, background tabs, blocked storage), the production build and checks of all nine generated HTML pages, local links, fragments, image/font assets, and page landmarks pass. Visual browser QA (desktop/mobile), keyboard interaction, clipboard behavior, and emulated reduced-motion QA remain pending: no browser was connected in the implementation session.

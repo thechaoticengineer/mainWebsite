@@ -18,7 +18,16 @@ const posts = (await getCollection('blog')).sort((a, b) => b.data.pubDate.valueO
 			<section class="hero" aria-labelledby="hero-title">
 				<div class="hero-copy">
 					<p class="eyebrow">Software / People / Things that break</p>
-					<h1 id="hero-title"><span class="title-small">The</span> <span>Chaotic</span> <span>Engineer</span></h1>
+					<h1 id="hero-title" aria-label={SITE_TITLE}>
+						<span class="title-small">The <span class="motion-art title-cursor" aria-hidden="true"></span></span>
+						{['Chaotic', 'Engineer'].map(word => (
+							<span class="title-word">
+								{word}
+								<span class="motion-art title-slice slice-top" aria-hidden="true">{word}</span>
+								<span class="motion-art title-slice slice-bottom" aria-hidden="true">{word}</span>
+							</span>
+						))}
+					</h1>
 					<p class="hero-description">Exploring the beautiful chaos of software engineering,<br class="desktop-break" /> one line of code at a time.</p>
 					<a href="/about" class="text-link">More about me <span aria-hidden="true">↗</span></a>
 				</div>
@@ -39,8 +48,23 @@ const posts = (await getCollection('blog')).sort((a, b) => b.data.pubDate.valueO
 	.hero-copy { min-width: 0; }
 	.hero .eyebrow { margin-bottom: 24px; font-size: .8rem; letter-spacing: .075em; }
 	h1 { font-family: var(--font-pixel); font-weight: 400; text-transform: uppercase; color: var(--accent); font-size: clamp(2rem, 4.85vw, 4.25rem); line-height: 1.42; letter-spacing: -.055em; margin: 0 0 20px; }
-	h1 span { display: block; }
-	h1 .title-small { font-size: .53em; line-height: 1.6; }
+	h1 > span { display: block; }
+	h1 .title-small { display: flex; align-items: center; gap: .4em; font-size: .53em; line-height: 1.6; }
+	.title-cursor { width: .5em; height: .55em; background: var(--accent); animation: cursor-blink 1.6s steps(1, end) infinite; }
+	.title-word { position: relative; width: max-content; max-width: 100%; isolation: isolate; }
+	.title-slice { position: absolute; inset: 0; pointer-events: none; user-select: none; opacity: 0; color: var(--fg); animation: pixel-shift 5.6s steps(1, end) infinite; }
+	.slice-top { clip-path: inset(20% 0 52% 0); --shift: .08em; }
+	.slice-bottom { clip-path: inset(58% 0 16% 0); --shift: -.06em; animation-delay: .12s; color: var(--accent); }
+	.title-word:last-child .title-slice { animation-duration: 6.8s; animation-delay: -3.4s; }
+	.title-word:last-child .slice-bottom { animation-delay: -3.25s; }
+	@keyframes cursor-blink { 0%, 55%, 100% { opacity: 1; } 60%, 95% { opacity: 0; } }
+	@keyframes pixel-shift {
+		0%, 16%, 30%, 100% { opacity: 0; transform: translate(0); }
+		18%, 26% { opacity: 1; transform: translate(var(--shift), -1px); }
+		22% { opacity: .75; transform: translate(calc(var(--shift) * -1), 1px); }
+	}
+	:global(html:not([data-motion='running'])) .title-slice { visibility: hidden; }
+	@media (prefers-reduced-motion: reduce) { .title-slice { display: none; } }
 	.hero-description { font-size: clamp(.95rem, 1.35vw, 1.15rem); margin-bottom: 18px; }
 	.section-heading { padding-top: 12px; margin-bottom: 10px; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
 	.section-heading h2 { margin: 0; font-weight: 400; }
