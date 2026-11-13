@@ -17,6 +17,7 @@ const posts = (await getCollection('blog')).sort((a, b) => b.data.pubDate.valueO
 		<main id="main-content" class="container">
 			<section class="hero" aria-labelledby="hero-title">
 				<div class="hero-copy">
+					<p class="eyebrow">Less mean more</p>
 					<h1 id="hero-title" aria-label={SITE_TITLE}>
 						<span class="title-small">The <span class="motion-art title-cursor" aria-hidden="true"></span></span>
 						{['Chaotic', 'Engineer'].map(word => (
@@ -45,6 +46,7 @@ const posts = (await getCollection('blog')).sort((a, b) => b.data.pubDate.valueO
 <style>
 	.hero { display: grid; grid-template-columns: minmax(0, 1.65fr) minmax(0, 1fr); align-items: center; gap: 20px; padding-block: 54px 24px; }
 	.hero-copy { min-width: 0; }
+	.hero .eyebrow { margin-bottom: 24px; font-size: .8rem; letter-spacing: .075em; }
 	h1 { font-family: var(--font-pixel); font-weight: 400; text-transform: uppercase; color: var(--accent); font-size: clamp(2rem, 4.85vw, 4.25rem); line-height: 1.42; letter-spacing: -.055em; margin: 0 0 20px; }
 	h1 > span { display: block; }
 	h1 .title-small { display: flex; align-items: center; gap: .4em; font-size: .53em; line-height: 1.6; }
