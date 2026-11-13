@@ -1,0 +1,10 @@
+---
+interface Props { kind?: 'chart' | 'quote' | 'terminal'; }
+const { kind = 'terminal' } = Astro.props;
+const paths = {
+	chart: 'M1 15h5v7H1zM9 10h5v12H9zM17 4h5v18h-5z',
+	quote: 'M3 5h8v9H7v5H3v-5H0V8h3zM16 5h8v9h-4v5h-4v-5h-3V8h3z',
+	terminal: 'M1 3h4v3H1zM5 6h4v3H5zM9 9h4v3H9zM5 12h4v3H5zM1 15h4v3H1zM13 19h11v3H13z',
+};
+---
+<svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" shape-rendering="crispEdges" aria-hidden="true"><path d={paths[kind]} /></svg>

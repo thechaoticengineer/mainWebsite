@@ -1,52 +1,30 @@
 ---
 const today = new Date();
 ---
-
-<footer>
-	<span class="copyright">&copy; {today.getFullYear()} The Chaotic Engineer. All rights reserved.</span>
-	<div class="footer-links">
-		<a href="/rss.xml">RSS</a>
-		<a href="https://github.com/thechaoticengineer" target="_blank" rel="noopener noreferrer">GitHub</a>
-		<a href="/sitemap-index.xml">Sitemap</a>
+<footer class="container">
+	<div class="cable" aria-hidden="true">
+		<svg viewBox="0 0 32 16" width="32" height="16" fill="currentColor" shape-rendering="crispEdges"><path d="M0 2h12v12H0zM14 2h8v3h4v3h6v2h-6v3h-4v3h-8z"/><path d="M3 4h3v3H3zm0 5h3v3H3z" fill="var(--surface)"/></svg>
+	</div>
+	<div class="footer-content">
+		<span class="copyright">&copy; {today.getFullYear()} The Chaotic Engineer</span>
+		<nav aria-label="Footer navigation">
+			<a href="/rss.xml">RSS <span aria-hidden="true">↗</span></a>
+			<a href="https://github.com/thechaoticengineer" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+			<a href="/sitemap-index.xml">Sitemap</a>
+		</nav>
 	</div>
 </footer>
 <style>
-	footer {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		padding: 32px 120px;
-		border-top: 1px solid var(--border);
-	}
-	.copyright {
-		font-family: var(--font-sans);
-		font-size: 13px;
-		color: var(--fg-muted);
-	}
-	.footer-links {
-		display: flex;
-		gap: 24px;
-	}
-	.footer-links a {
-		font-family: var(--font-code);
-		font-size: 12px;
-		color: var(--accent-dark);
-		text-decoration: none;
-		transition: color 0.2s ease;
-	}
-	.footer-links a:hover {
-		color: var(--accent);
-	}
-
-	@media (max-width: 720px) {
-		footer {
-			flex-direction: column;
-			gap: 12px;
-			padding: 24px 20px;
-			text-align: center;
-		}
-		.footer-links {
-			gap: 20px;
-		}
+	footer { margin-top: 72px; padding-bottom: 32px; }
+	.cable { display: flex; align-items: center; color: var(--fg); }
+	.cable::after { content: ''; height: 2px; flex: 1; background: currentColor; }
+	.cable svg { flex-shrink: 0; color: var(--accent); }
+	.footer-content { display: flex; justify-content: space-between; gap: 24px; padding-top: 20px; font-size: .8rem; }
+	nav { display: flex; gap: 24px; flex-wrap: wrap; }
+	.copyright { color: var(--fg-muted); }
+	@media (max-width: 640px) {
+		footer { margin-top: 48px; }
+		.footer-content { flex-direction: column; gap: 14px; }
+		nav a { padding-block: 6px; }
 	}
 </style>

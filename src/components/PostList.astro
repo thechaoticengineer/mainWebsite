@@ -1,0 +1,47 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import FormattedDate from './FormattedDate.astro';
+import PixelIcon from './PixelIcon.astro';
+interface Props { posts: CollectionEntry<'blog'>[]; detailed?: boolean; }
+const { posts, detailed = false } = Astro.props;
+function iconFor(tags: string[]): 'chart' | 'quote' | 'terminal' {
+	return tags.includes('leadership') ? 'chart' : tags.some(tag => ['culture', 'career', 'teams'].includes(tag)) ? 'quote' : 'terminal';
+}
+---
+<ul class:list={['post-list', { detailed }]}>
+	{posts.map(post => (
+		<li>
+			<a href={`/blog/${post.id}/`}>
+				<span class="post-icon"><PixelIcon kind={iconFor(post.data.tags ?? [])} /></span>
+				<div class="post-content">
+					<h3>{post.data.title}</h3>
+					{detailed && <>
+						<p>{post.data.description}</p>
+						<div class="post-meta"><FormattedDate date={post.data.pubDate} /><span aria-hidden="true"> · </span>{Math.max(1, Math.ceil((post.body?.split(/\s+/).length ?? 0) / 200))} min read</div>
+					</>}
+				</div>
+				<span class="post-tag">{post.data.tags?.[0] ?? 'notes'}</span>
+				<span class="post-arrow" aria-hidden="true">→</span>
+			</a>
+		</li>
+	))}
+</ul>
+<style>
+	.post-list { list-style: none; padding: 0; margin: 0; }
+	li + li { border-top: 1px solid var(--border); }
+	a { display: grid; grid-template-columns: 32px minmax(0, 1fr) 130px 24px; align-items: center; gap: 24px; padding: 26px 12px; text-decoration: none; transition: background-color 120ms; }
+	a:hover, a:focus-visible { background: var(--highlight); color: var(--fg); }
+	.post-icon, .post-tag { color: var(--accent); }
+	.post-icon { display: flex; }
+	h3 { margin: 0; font-size: clamp(1.05rem, 1.65vw, 1.4rem); font-weight: 400; line-height: 1.5; }
+	.post-tag { font-size: .7rem; text-transform: uppercase; letter-spacing: .06em; }
+	.post-arrow { font-size: 1.5rem; }
+	.post-content { min-width: 0; }
+	.post-content p { font-family: var(--font-sans); margin: 10px 0; color: var(--fg-muted); font-size: 1rem; max-width: 760px; }
+	.post-meta { color: var(--fg-muted); font-size: .72rem; }
+	.detailed a { padding-block: 32px; }
+	@media (max-width: 800px) {
+		a { grid-template-columns: 26px minmax(0, 1fr) 20px; gap: 16px; padding-inline: 0; }
+		.post-tag { display: none; }
+	}
+</style>

@@ -1,0 +1,20 @@
+---
+import { Image } from 'astro:assets';
+import Machine from '../assets/pixel-machine.png';
+---
+<div class="machine" aria-hidden="true">
+	<Image src={Machine} alt="" width={520} widths={[320, 520, 780]} sizes="(max-width: 640px) 260px, (max-width: 900px) 320px, 440px" loading="eager" />
+	<span class="signal signal-one"></span>
+	<span class="signal signal-two"></span>
+</div>
+<style>
+	.machine { position: relative; width: 100%; max-width: 460px; justify-self: end; }
+	.machine img { width: 100%; image-rendering: pixelated; }
+	.signal { position: absolute; width: 5px; height: 5px; background: var(--accent); animation: signal 4s steps(1, end) 2; }
+	.signal-one { top: 44%; left: 24%; }
+	.signal-two { top: 64%; right: 12%; animation-delay: 1.2s; }
+	@keyframes signal { 0%, 65%, 100% { opacity: 0; } 70%, 85% { opacity: 1; } }
+	@media (max-width: 900px) { .machine { max-width: 340px; } }
+	@media (max-width: 640px) { .machine { width: 260px; justify-self: center; } }
+	@media (prefers-reduced-motion: reduce) { .signal { display: none; } }
+</style>
