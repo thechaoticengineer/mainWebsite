@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Personal blog/website for "The Chaotic Engineer" (thechaotic.engineer), built with Astro 6. The site has a cyberpunk/neon-green-on-dark theme with CRT scanline effects and glitch animations.
+Personal blog/website for "The Chaotic Engineer" (thechaotic.engineer), built with Astro 7. The site has a cyberpunk/neon-green-on-dark theme with CRT scanline effects and glitch animations.
 
 ## Commands
 
@@ -18,7 +18,7 @@ Deploys automatically to GitHub Pages via `.github/workflows/deploy.yml` on push
 
 ## Architecture
 
-- **Astro 6** static site with MDX and sitemap integrations
+- **Astro 7** static site with MDX and sitemap integrations; `compressHTML: true` preserves the pre-upgrade spacing between inline elements
 - **Content collections** defined in `src/content.config.ts` — blog posts live in `src/content/blog/` as Markdown/MDX files
 - Blog post frontmatter schema: `title`, `description`, `pubDate` (required), `updatedDate`, `heroImage`, `tags` (optional)
 - **Layouts**: `BlogPost.astro` is the only layout, wrapping blog post content
