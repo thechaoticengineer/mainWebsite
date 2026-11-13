@@ -4,7 +4,17 @@ import HeaderLink from './HeaderLink.astro';
 <a class="skip-link" href="#main-content">Skip to content</a>
 <header class="container">
 	<nav aria-label="Main navigation">
-		<a href="/" class="logo" aria-label="The Chaotic Engineer — home">the chaotic engineer</a>
+		<a href="/" class="logo" aria-label="The Chaotic Engineer — home">
+			<svg class="logo-mark" viewBox="0 0 32 32" width="40" height="40" fill="currentColor" shape-rendering="crispEdges" aria-hidden="true">
+				<path class="mark-c" d="M6 4h14v4H6zM2 8h4v16H2zM6 24h14v4H6z" />
+				<path class="mark-e" d="M14 10h14v4H18v4h8v4h-8v6h-4zM18 26h10v4H18z" />
+				<path class="loose-pixel" d="M26 2h4v4h-4z" />
+			</svg>
+			<span class="logo-wordmark" aria-hidden="true">
+				<span class="logo-top">the chaotic</span>
+				<span class="logo-bottom">engineer</span>
+			</span>
+		</a>
 		<div class="nav-links">
 			<HeaderLink href="/blog">Blog</HeaderLink>
 			<HeaderLink href="/about">About</HeaderLink>
@@ -16,13 +26,21 @@ import HeaderLink from './HeaderLink.astro';
 	header { border-bottom: 1px solid var(--fg-muted); }
 	nav { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 82px; }
 	a { text-decoration: none; }
-	.logo { font-size: 1.2rem; letter-spacing: .025em; }
+	.logo { display: inline-flex; align-items: center; gap: 14px; padding-block: 10px; flex-shrink: 0; }
+	.logo-mark { flex-shrink: 0; }
+	.mark-c { fill: var(--accent); }
+	.mark-e { fill: var(--fg); }
+	.loose-pixel { fill: #d5a454; transition: transform 140ms steps(2, end); }
+	.logo:is(:hover, :focus-visible) .loose-pixel { transform: translate(-2px, 2px); }
+	.logo-wordmark { display: flex; flex-direction: column; gap: 7px; font-family: var(--font-pixel); text-transform: uppercase; white-space: nowrap; }
+	.logo-top { font-size: 10px; line-height: 1; color: var(--accent); }
+	.logo-bottom { font-size: 14px; line-height: 1; color: var(--fg); }
 	.nav-links { display: flex; align-items: center; gap: 32px; }
 	.nav-links :global(a) { padding-block: 12px; }
 	.nav-links :global(a.active) { text-decoration: underline; text-decoration-color: var(--accent); }
 	@media (max-width: 640px) {
 		nav { min-height: 100px; flex-wrap: wrap; justify-content: center; gap: 0; padding-block: 14px 4px; }
-		.logo { font-size: 1rem; width: 100%; text-align: center; }
-		.nav-links { gap: 32px; font-size: .875rem; }
+		.logo { justify-content: center; }
+		.nav-links { width: 100%; justify-content: center; gap: 32px; font-size: .875rem; }
 	}
 </style>
